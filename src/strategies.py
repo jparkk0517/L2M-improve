@@ -101,10 +101,9 @@ class CoTStrategy(BaselineStrategy):
         # 변경: 추론 과정을 보여주도록 지시해야 성능이 향상됨
         return """
 Strategy (CoT):
-- You MUST Think step by step.
-- Write down which word you are processing and what its last letter is.
-- Concatenate them step by step.
-- Finally, write the Final answer line.
+- Think step by step internally, but do NOT write any reasoning.
+- Do NOT write intermediate steps, notes, or explanations.
+- Output ONLY the final line in the required format.
 """.strip()
 
 
@@ -121,26 +120,24 @@ class L2MStrategy(BaselineStrategy):
 Strategy (L2M)
 
 Decomposition (strict):
-- Write exactly one line that starts with "Decomposition:".
-- After "Decomposition:", write exactly {n_words} subproblems separated by " | ".
-- Each subproblem must be a short, meaningful step (concept-level), not token-level.
-- Steps must be ordered from easiest/most basic to hardest/final.
-- Do NOT solve anything.
-- Do NOT include the character "|" inside any subproblem text.
-- Do NOT add any extra lines.
+- Output exactly ONE line starting with "Decomposition:".
+- After it, write exactly {n_words} items separated by " ; ".
+- Item i must be EXACTLY:
+  Wi: get the last letter of the i-th word
+- Do NOT solve anything. No extra lines.
 
 Sub-problem solving (strict):
-- Write exactly {n_words} lines, nothing else.
-- Line i must start with "Solve<i>:" where <i> is 1..{n_words}.
-- Each line must solve decomposition[i] in the same order.
-- Each line must be a single line (no line breaks), concise and complete.
-- You MUST use results from previous Solve lines when relevant.
-- Do NOT restate the subproblem text. Do NOT add extra commentary.
+- Output exactly {n_words} lines.
+- Line i must be EXACTLY:
+  Solve<i>: <c>
+- <c> MUST be exactly ONE lowercase letter a-z (no spaces, no punctuation).
+- Do NOT add any other text.
 
 Final (strict):
-- After the {n_words} Solve lines, output exactly one final line:
+- Output exactly one final line:
   Final answer: <answer>
-- Do NOT add anything after the final line.
+- <answer> must be exactly {n_words} lowercase letters a-z.
+- Output nothing after the final line.
 """.strip()
 
 
@@ -157,28 +154,23 @@ class L2MDVStrategy(L2MStrategy):
 Strategy (L2M-DV: Decomposition + Verification, no loops)
 
 Decomposition (strict):
-- Write exactly one line that starts with "Decomposition:".
-- After "Decomposition:", write exactly {n_words} subproblems separated by " | ".
-- Each subproblem MUST be in this exact format:
-  <subproblem> {{criteria: <criteria>}}
-- <subproblem> must be concept-level, short, and ordered least-to-most.
-- <criteria> must be a concrete, checkable condition for success (not vague).
-- Do NOT solve anything.
-- Do NOT include the character "|" inside <subproblem> or <criteria>.
-- Do NOT add any extra lines.
+- Output exactly ONE line starting with "Decomposition:".
+- After it, write exactly {n_words} items separated by " ; " (semicolon).
+- Item i must be:
+  Wi=<the i-th word> {{criteria: output exactly 1 lowercase letter which is the last character of Wi}}
+- Do NOT solve anything else. No extra lines.
 
-Sub-problem solving + verification (strict):
-- Write exactly {n_words} lines, nothing else.
-- Line i must be EXACTLY in this format:
-  Solve<i>: <solution> || Check<i>: PASS|FAIL || Why<i>: <short reason>
-- Solve<i> must solve the i-th decomposed subproblem (same order).
-- Check<i> must judge whether <solution> meets the criteria written for step i.
-- If FAIL, do NOT retry, do NOT revise earlier steps (no loops). Continue to the next step with best effort.
-- You MUST use results from previous Solve lines when relevant.
-- No extra commentary, no bullets, no numbering other than the required <i>.
+Solving + verification (strict):
+- Output exactly {n_words} lines.
+- Line i must be EXACTLY:
+  Solve<i>: <c> || Check<i>: P|F
+- <c> MUST be exactly ONE lowercase letter a-z (no spaces).
+- Check<i> is P if <c> meets the criteria, otherwise F.
+- Do NOT add Why. Do NOT add any extra text.
 
 Final (strict):
-- After the {n_words} Solve lines, output exactly one final line:
+- After the {n_words} lines, output exactly one final line:
   Final answer: <answer>
-- Do NOT add anything after the final line.
+- <answer> must be exactly {n_words} lowercase letters a-z.
+- Output nothing after the final line.
 """.strip()

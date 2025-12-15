@@ -1,11 +1,21 @@
 """L2M-CoT 평가 로직 모듈."""
 
+import threading
+from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from typing import List, Dict
 
 from src.strategies import SolverStrategy, StrategyResult
 from src.utils import normalize_answer
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    # tqdm이 없으면 간단한 대체 함수 사용
+    def tqdm(iterable, desc=""):
+        print(f"{desc}...")
+        return iterable
 
 
 @dataclass
@@ -103,6 +113,145 @@ def evaluate(
                 l2mdv_correct=is_correct(l2mdv.final_answer, gold, n_words),
             )
         )
+
+    return results
+
+
+# =========================================================
+# ✅ 배치 처리 함수
+# =========================================================
+
+# Rate Limit을 위한 Semaphore (전역 변수)
+_api_semaphore: threading.Semaphore = None
+
+
+def _init_semaphore(max_concurrent: int) -> None:
+    """API 동시 호출 제한을 위한 세마포어 초기화."""
+    global _api_semaphore
+    _api_semaphore = threading.Semaphore(max_concurrent)
+
+
+def _solve_with_limit(
+    strategy: SolverStrategy, question: str, use_fewshot: bool, n_words: int
+) -> StrategyResult:
+    """세마포어로 동시 요청 수를 제한하며 전략 실행."""
+    with _api_semaphore:
+        return strategy.solve(question, use_fewshot, n_words)
+
+
+def _print_batch_summary(results: List[Result], n_words: int) -> None:
+    """배치 처리 후 해당 num_words의 평균 정확도 출력."""
+    batch_results = [r for r in results if r.n_words == n_words]
+    if not batch_results:
+        return
+
+    print(f"\n[Batch Summary for n_words={n_words}]")
+    for name, attr in zip(STRATEGY_NAMES, STRATEGY_PRED_ATTRS):
+        correct_sum = 0
+        total_sum = 0
+        for r in batch_results:
+            pred = getattr(r, attr)
+            correct, total, _ = position_acc_stats(r.gold, pred)
+            correct_sum += correct
+            total_sum += total
+        acc = (correct_sum / total_sum * 100.0) if total_sum else 0.0
+        print(f"  {name:10s}: {acc:.2f}%")
+
+
+def evaluate_batch(
+    dataset: List[Dict[str, object]],
+    strategies: List[SolverStrategy],
+    use_fewshot: bool,
+    batch_size: int = 5,
+    max_concurrent: int = 8,
+) -> List[Result]:
+    """
+    num_words별로 배치 단위 병렬 처리.
+
+    Args:
+        dataset: 전체 데이터셋
+        strategies: 평가할 전략 리스트
+        use_fewshot: few-shot 사용 여부
+        batch_size: 각 num_words당 동시 실행할 문제 수
+        max_concurrent: 최대 동시 API 호출 수
+
+    Returns:
+        List[Result]: 평가 결과 리스트
+    """
+    # 세마포어 초기화
+    _init_semaphore(max_concurrent)
+
+    # 1. num_words별로 데이터셋 그룹화
+    by_n_words: Dict[int, List[Dict]] = defaultdict(list)
+    for item in dataset:
+        by_n_words[int(item["n_words"])].append(item)
+
+    results: List[Result] = []
+
+    # 2. 각 num_words 그룹 처리
+    for n_words in tqdm(sorted(by_n_words.keys()), desc="Processing by n_words"):
+        items = by_n_words[n_words][:batch_size]  # 배치 크기만큼 선택
+
+        print(f"\n{'=' * 70}")
+        print(f"num_words = {n_words} | batch_size = {len(items)}")
+
+        # 3. 배치 내 모든 (문제, 전략) 조합을 병렬 실행
+        batch_results: Dict[int, Dict[str, object]] = defaultdict(dict)
+
+        with ThreadPoolExecutor(
+            max_workers=min(len(items) * len(strategies), max_concurrent)
+        ) as executor:
+            futures = {}
+            for item in items:
+                pid = int(item["id"])
+                for strategy in strategies:
+                    future = executor.submit(
+                        _solve_with_limit,
+                        strategy,
+                        str(item["question"]),
+                        use_fewshot,
+                        n_words,
+                    )
+                    futures[future] = (pid, strategy.name, item)
+
+            for future in as_completed(futures):
+                pid, strategy_name, item = futures[future]
+                batch_results[pid][strategy_name] = future.result()
+                batch_results[pid]["_item"] = item
+
+        # 4. 배치 결과를 Result 객체로 변환
+        for pid, outs in batch_results.items():
+            item = outs.pop("_item")
+            gold = str(item["answer"])
+
+            # 중간 로그 출력
+            for name in STRATEGY_NAMES:
+                if name in outs:
+                    log_accuracy(name, gold, outs[name].final_answer)
+
+            results.append(
+                Result(
+                    problem_id=pid,
+                    n_words=n_words,
+                    question=str(item["question"]),
+                    gold=gold,
+                    baseline_pred=outs["Baseline"].final_answer,
+                    cot_pred=outs["CoT"].final_answer,
+                    l2m_pred=outs["L2M"].final_answer,
+                    l2mdv_pred=outs["L2M-DV"].final_answer,
+                    baseline_correct=is_correct(
+                        outs["Baseline"].final_answer, gold, n_words
+                    ),
+                    cot_correct=is_correct(outs["CoT"].final_answer, gold, n_words),
+                    l2m_correct=is_correct(outs["L2M"].final_answer, gold, n_words),
+                    l2mdv_correct=is_correct(
+                        outs["L2M-DV"].final_answer, gold, n_words
+                    ),
+                )
+            )
+
+        # 5. num_words별 배치 평균 정확도 출력
+        _print_batch_summary(results, n_words)
 
     return results
 

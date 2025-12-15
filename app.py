@@ -6,10 +6,16 @@
 
 from typing import List
 
-from src.config import MAX_WORDS, TRIALS_PER_LENGTH, RANDOM_SEED
+from src.config import (
+    MAX_WORDS,
+    TRIALS_PER_LENGTH,
+    RANDOM_SEED,
+    BATCH_SIZE,
+    MAX_CONCURRENT_API,
+)
 from src.dataset import build_dataset
 from src.evaluation import (
-    evaluate,
+    evaluate_batch,
     summarize,
     print_accuracy_table,
     plot_accuracy_comparison,
@@ -34,7 +40,14 @@ def main():
         L2MDVStrategy(),
     ]
 
-    results = evaluate(dataset, strategies=strategies, use_fewshot=True)
+    # 배치 처리 방식 평가
+    results = evaluate_batch(
+        dataset,
+        strategies=strategies,
+        use_fewshot=True,
+        batch_size=BATCH_SIZE,
+        max_concurrent=MAX_CONCURRENT_API,
+    )
 
     # 기본 요약 출력
     summarize(results, MAX_WORDS)

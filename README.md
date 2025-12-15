@@ -1,5 +1,5 @@
 # L2M-improve
-
+빅데이터와 정보검색 기말고사를 위한 L2M-DV 모델 제안 및 실험
 ## baseline vs CoT vs L2M vs L2M-DV
 
 | 항목         | 조건    |

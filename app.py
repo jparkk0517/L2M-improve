@@ -20,6 +20,7 @@ from src.evaluation import (
     print_accuracy_table,
     plot_accuracy_comparison,
 )
+from src.experiment_logger import get_logger
 from src.strategies import (
     SolverStrategy,
     BaselineStrategy,
@@ -31,6 +32,10 @@ from src.strategies import (
 
 def main():
     """메인 함수: 데이터셋 생성 → 전략 평가 → 결과 요약."""
+    # 실험 로거 시작
+    logger = get_logger()
+    logger.start_experiment()
+
     dataset = build_dataset(MAX_WORDS, TRIALS_PER_LENGTH, RANDOM_SEED)
 
     strategies: List[SolverStrategy] = [
@@ -55,8 +60,12 @@ def main():
     # 단어 갯수별 정확도 테이블 출력
     print_accuracy_table(results)
 
-    # 그래프 생성 및 저장
-    plot_accuracy_comparison(results, save_path="accuracy_comparison.png", show=True)
+    # 그래프 생성 및 저장 (실험 폴더에 저장)
+    save_path = logger.get_results_path("accuracy_comparison.png")
+    plot_accuracy_comparison(results, save_path=save_path, show=True)
+
+    # 실험 종료 및 로그 저장
+    logger.finish_experiment()
 
 
 if __name__ == "__main__":

@@ -271,7 +271,7 @@ def position_acc_stats(gold: str, pred: str):
 
 
 def macro_micro(results: List[Result], attr_name: str):
-    """Macro/Micro 평균 정확도를 계산."""
+    """위치별 Macro/Micro 평균 정확도를 계산."""
     pcts = []
     correct_sum = 0
     total_sum = 0
@@ -288,6 +288,21 @@ def macro_micro(results: List[Result], attr_name: str):
     return macro, micro
 
 
+def exact_match_accuracy(results: List[Result], attr_name: str) -> float:
+    """Exact Match 정확도를 계산 (완전 일치 비율)."""
+    if not results:
+        return 0.0
+
+    correct = 0
+    for r in results:
+        pred = normalize_answer(getattr(r, attr_name))
+        gold = normalize_answer(r.gold)
+        if pred == gold:
+            correct += 1
+
+    return (correct / len(results)) * 100.0
+
+
 def summarize(results: List[Result], max_len: int) -> None:
     """결과를 요약하여 출력."""
     base_macro, base_micro = macro_micro(results, "baseline_pred")
@@ -295,12 +310,18 @@ def summarize(results: List[Result], max_len: int) -> None:
     l2m_macro, l2m_micro = macro_micro(results, "l2m_pred")
     dv_macro, dv_micro = macro_micro(results, "l2mdv_pred")
 
+    # Exact Match 정확도
+    base_em = exact_match_accuracy(results, "baseline_pred")
+    cot_em = exact_match_accuracy(results, "cot_pred")
+    l2m_em = exact_match_accuracy(results, "l2m_pred")
+    dv_em = exact_match_accuracy(results, "l2mdv_pred")
+
     print("-" * 70)
-    print("Average position-wise accuracy (Macro / Micro)")
-    print(f"Baseline : {base_macro:.2f}% / {base_micro:.2f}%")
-    print(f"CoT      : {cot_macro:.2f}% / {cot_micro:.2f}%")
-    print(f"L2M      : {l2m_macro:.2f}% / {l2m_micro:.2f}%")
-    print(f"L2M-DV   : {dv_macro:.2f}% / {dv_micro:.2f}%")
+    print("Average position-wise accuracy (Macro / Micro) | Exact Match")
+    print(f"Baseline : {base_macro:.2f}% / {base_micro:.2f}% | EM: {base_em:.2f}%")
+    print(f"CoT      : {cot_macro:.2f}% / {cot_micro:.2f}% | EM: {cot_em:.2f}%")
+    print(f"L2M      : {l2m_macro:.2f}% / {l2m_micro:.2f}% | EM: {l2m_em:.2f}%")
+    print(f"L2M-DV   : {dv_macro:.2f}% / {dv_micro:.2f}% | EM: {dv_em:.2f}%")
 
 
 # =========================================================
@@ -350,12 +371,13 @@ def get_summary_stats(results: List[Result]) -> Dict[str, Dict[str, float]]:
     """전체 평균 정확도 통계를 반환.
 
     Returns:
-        Dict[str, Dict[str, float]]: {strategy_name: {"macro": %, "micro": %}}
+        Dict[str, Dict[str, float]]: {strategy_name: {"macro": %, "micro": %, "em": %}}
     """
     stats = {}
     for name, attr in zip(STRATEGY_NAMES, STRATEGY_PRED_ATTRS):
         macro, micro = macro_micro(results, attr)
-        stats[name] = {"macro": macro, "micro": micro}
+        em = exact_match_accuracy(results, attr)
+        stats[name] = {"macro": macro, "micro": micro, "em": em}
     return stats
 
 
@@ -388,8 +410,12 @@ def print_accuracy_table(results: List[Result]) -> None:
     macro_row = f"{'Macro':>8} | " + " | ".join(
         f"{summary[name]['macro']:>10.2f}" for name in STRATEGY_NAMES
     )
+    em_row = f"{'EM':>8} | " + " | ".join(
+        f"{summary[name]['em']:>10.2f}" for name in STRATEGY_NAMES
+    )
     print(micro_row)
     print(macro_row)
+    print(em_row)
     print("=" * 70)
 
 

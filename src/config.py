@@ -9,7 +9,7 @@ load_dotenv()
 # =========================================================
 # 설정
 # =========================================================
-MODEL_NAME = "gpt-4o-mini"
+MODEL_NAME = "openai/gpt-oss-20b"
 MAX_WORDS = 15
 TRIALS_PER_LENGTH = 5  # BATCH_SIZE와 동일하게 설정 권장
 RANDOM_SEED = 42

@@ -14,6 +14,22 @@
 
 ![alt text](experiments/20251216_164827/accuracy_comparison.png)
 
+## 항목 설명
+
+### Accuracy
+
+위치별(position-wise) 정확도. 각 글자 위치에서 정답과 일치하는지 비교.
+
+### Micro Accuracy
+
+전체 prediction에서 맞춘 글자 수의 총합 / 전체 gold 글자 수의 총합
+(글자 수가 많은 문제에 더 큰 가중치)
+
+### Macro Accuracy
+
+각 문제별 정확도의 평균
+(모든 문제에 동일한 가중치)
+
 ### Batch Summary (n_words=15)
 
 | Strategy | Accuracy | Tokens | Avg Time |

@@ -1,0 +1,1411 @@
+
+======================================================================
+num_words = 1 | batch_size = 20
+Baseline | pred='y' | pos_acc=1/1 (100.0%) | 343tok | 1.34s
+CoT      | pred='y' | pos_acc=1/1 (100.0%) | 368tok | 1.34s
+L2M      | pred='y' | pos_acc=1/1 (100.0%) | 510tok | 2.02s
+L2M-DV   | pred='y' | pos_acc=1/1 (100.0%) | 757tok | 3.06s
+Baseline | pred='s' | pos_acc=1/1 (100.0%) | 344tok | 1.68s
+CoT      | pred='s' | pos_acc=1/1 (100.0%) | 369tok | 1.36s
+L2M      | pred='s' | pos_acc=1/1 (100.0%) | 495tok | 1.50s
+L2M-DV   | pred='s' | pos_acc=1/1 (100.0%) | 729tok | 4.30s
+Baseline | pred='l' | pos_acc=1/1 (100.0%) | 344tok | 0.87s
+CoT      | pred='l' | pos_acc=1/1 (100.0%) | 369tok | 0.70s
+L2M      | pred='l' | pos_acc=1/1 (100.0%) | 503tok | 1.19s
+L2M-DV   | pred='l' | pos_acc=1/1 (100.0%) | 727tok | 2.61s
+Baseline | pred='l' | pos_acc=1/1 (100.0%) | 343tok | 1.90s
+CoT      | pred='l' | pos_acc=1/1 (100.0%) | 368tok | 0.94s
+L2M      | pred='l' | pos_acc=1/1 (100.0%) | 510tok | 1.62s
+L2M-DV   | pred='l' | pos_acc=1/1 (100.0%) | 725tok | 3.49s
+Baseline | pred='y' | pos_acc=1/1 (100.0%) | 343tok | 1.07s
+CoT      | pred='y' | pos_acc=1/1 (100.0%) | 368tok | 0.72s
+L2M      | pred='y' | pos_acc=1/1 (100.0%) | 515tok | 1.59s
+L2M-DV   | pred='y' | pos_acc=1/1 (100.0%) | 726tok | 2.92s
+Baseline | pred='y' | pos_acc=1/1 (100.0%) | 345tok | 0.85s
+CoT      | pred='y' | pos_acc=1/1 (100.0%) | 370tok | 0.98s
+L2M      | pred='y' | pos_acc=1/1 (100.0%) | 512tok | 1.68s
+L2M-DV   | pred='y' | pos_acc=1/1 (100.0%) | 730tok | 2.00s
+Baseline | pred='t' | pos_acc=1/1 (100.0%) | 343tok | 0.91s
+CoT      | pred='t' | pos_acc=1/1 (100.0%) | 368tok | 0.72s
+L2M      | pred='t' | pos_acc=1/1 (100.0%) | 494tok | 1.86s
+L2M-DV   | pred='t' | pos_acc=1/1 (100.0%) | 726tok | 2.33s
+Baseline | pred='n' | pos_acc=1/1 (100.0%) | 344tok | 0.84s
+CoT      | pred='n' | pos_acc=1/1 (100.0%) | 369tok | 0.75s
+L2M      | pred='n' | pos_acc=1/1 (100.0%) | 511tok | 2.26s
+L2M-DV   | pred='n' | pos_acc=1/1 (100.0%) | 729tok | 2.12s
+Baseline | pred='n' | pos_acc=1/1 (100.0%) | 343tok | 1.30s
+CoT      | pred='n' | pos_acc=1/1 (100.0%) | 368tok | 0.89s
+L2M      | pred='n' | pos_acc=1/1 (100.0%) | 515tok | 1.54s
+L2M-DV   | pred='n' | pos_acc=1/1 (100.0%) | 727tok | 2.03s
+Baseline | pred='m' | pos_acc=1/1 (100.0%) | 344tok | 1.00s
+CoT      | pred='m' | pos_acc=1/1 (100.0%) | 369tok | 0.86s
+L2M      | pred='m' | pos_acc=1/1 (100.0%) | 495tok | 1.33s
+L2M-DV   | pred='m' | pos_acc=1/1 (100.0%) | 729tok | 2.35s
+Baseline | pred='y' | pos_acc=1/1 (100.0%) | 345tok | 0.81s
+CoT      | pred='y' | pos_acc=1/1 (100.0%) | 370tok | 0.90s
+L2M      | pred='y' | pos_acc=1/1 (100.0%) | 512tok | 1.92s
+L2M-DV   | pred='y' | pos_acc=1/1 (100.0%) | 731tok | 2.82s
+Baseline | pred='m' | pos_acc=1/1 (100.0%) | 346tok | 2.58s
+CoT      | pred='m' | pos_acc=1/1 (100.0%) | 371tok | 0.86s
+L2M      | pred='m' | pos_acc=1/1 (100.0%) | 497tok | 1.75s
+L2M-DV   | pred='m' | pos_acc=1/1 (100.0%) | 704tok | 1.74s
+Baseline | pred='y' | pos_acc=1/1 (100.0%) | 343tok | 0.90s
+CoT      | pred='y' | pos_acc=1/1 (100.0%) | 368tok | 0.80s
+L2M      | pred='y' | pos_acc=1/1 (100.0%) | 510tok | 1.73s
+L2M-DV   | pred='y' | pos_acc=1/1 (100.0%) | 725tok | 2.15s
+Baseline | pred='y' | pos_acc=1/1 (100.0%) | 343tok | 0.82s
+CoT      | pred='y' | pos_acc=1/1 (100.0%) | 368tok | 0.83s
+L2M      | pred='y' | pos_acc=1/1 (100.0%) | 494tok | 1.75s
+L2M-DV   | pred='y' | pos_acc=1/1 (100.0%) | 728tok | 2.86s
+Baseline | pred='n' | pos_acc=1/1 (100.0%) | 343tok | 0.77s
+CoT      | pred='n' | pos_acc=1/1 (100.0%) | 368tok | 0.88s
+L2M      | pred='n' | pos_acc=1/1 (100.0%) | 494tok | 1.90s
+L2M-DV   | pred='n' | pos_acc=1/1 (100.0%) | 728tok | 3.89s
+Baseline | pred='s' | pos_acc=1/1 (100.0%) | 344tok | 0.91s
+CoT      | pred='s' | pos_acc=1/1 (100.0%) | 369tok | 0.80s
+L2M      | pred='s' | pos_acc=1/1 (100.0%) | 495tok | 1.49s
+L2M-DV   | pred='s' | pos_acc=1/1 (100.0%) | 730tok | 2.14s
+Baseline | pred='n' | pos_acc=1/1 (100.0%) | 344tok | 1.28s
+CoT      | pred='n' | pos_acc=1/1 (100.0%) | 369tok | 0.61s
+L2M      | pred='n' | pos_acc=1/1 (100.0%) | 495tok | 1.19s
+L2M-DV   | pred='n' | pos_acc=1/1 (100.0%) | 728tok | 2.37s
+Baseline | pred='n' | pos_acc=1/1 (100.0%) | 344tok | 0.84s
+CoT      | pred='n' | pos_acc=1/1 (100.0%) | 369tok | 0.74s
+L2M      | pred='n' | pos_acc=1/1 (100.0%) | 495tok | 1.25s
+L2M-DV   | pred='n' | pos_acc=1/1 (100.0%) | 729tok | 3.59s
+Baseline | pred='y' | pos_acc=1/1 (100.0%) | 343tok | 1.86s
+CoT      | pred='y' | pos_acc=1/1 (100.0%) | 368tok | 0.92s
+L2M      | pred='y' | pos_acc=1/1 (100.0%) | 515tok | 2.48s
+L2M-DV   | pred='y' | pos_acc=1/1 (100.0%) | 727tok | 2.09s
+Baseline | pred='n' | pos_acc=1/1 (100.0%) | 345tok | 0.78s
+CoT      | pred='n' | pos_acc=1/1 (100.0%) | 370tok | 0.81s
+L2M      | pred='n' | pos_acc=1/1 (100.0%) | 496tok | 1.25s
+L2M-DV   | pred='n' | pos_acc=1/1 (100.0%) | 702tok | 1.69s
+
+### Batch Summary (n_words=1)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline | 100.00% | 6,876 | 1.165s |
+| CoT      | 100.00% | 7,376 | 0.870s |
+| L2M      | 100.00% | 10,063 | 1.666s |
+| L2M-DV   | 100.00% | 14,537 | 2.628s |
+
+======================================================================
+num_words = 2 | batch_size = 20
+Baseline | pred='nn' | pos_acc=2/2 (100.0%) | 344tok | 0.72s
+CoT      | pred='nn' | pos_acc=2/2 (100.0%) | 369tok | 0.68s
+L2M      | pred='nn' | pos_acc=2/2 (100.0%) | 504tok | 1.20s
+L2M-DV   | pred='nn' | pos_acc=2/2 (100.0%) | 763tok | 1.84s
+Baseline | pred='ee' | pos_acc=1/2 (50.0%) | 346tok | 0.82s
+CoT      | pred='ee' | pos_acc=1/2 (50.0%) | 371tok | 1.03s
+L2M      | pred='en' | pos_acc=2/2 (100.0%) | 510tok | 1.35s
+L2M-DV   | pred='en' | pos_acc=2/2 (100.0%) | 725tok | 2.91s
+Baseline | pred='yt' | pos_acc=1/2 (50.0%) | 347tok | 0.87s
+CoT      | pred='yt' | pos_acc=1/2 (50.0%) | 372tok | 1.35s
+L2M      | pred='ye' | pos_acc=2/2 (100.0%) | 507tok | 2.59s
+L2M-DV   | pred='ye' | pos_acc=2/2 (100.0%) | 724tok | 2.19s
+Baseline | pred='nn' | pos_acc=1/2 (50.0%) | 345tok | 0.63s
+CoT      | pred='nn' | pos_acc=1/2 (50.0%) | 370tok | 1.32s
+L2M      | pred='ny' | pos_acc=2/2 (100.0%) | 505tok | 1.22s
+L2M-DV   | pred='ny' | pos_acc=2/2 (100.0%) | 764tok | 3.43s
+Baseline | pred='yt' | pos_acc=2/2 (100.0%) | 346tok | 0.75s
+CoT      | pred='yt' | pos_acc=2/2 (100.0%) | 371tok | 0.85s
+L2M      | pred='yt' | pos_acc=2/2 (100.0%) | 510tok | 1.86s
+L2M-DV   | pred='yt' | pos_acc=2/2 (100.0%) | 724tok | 2.74s
+Baseline | pred='mc' | pos_acc=1/2 (50.0%) | 347tok | 0.86s
+CoT      | pred='mc' | pos_acc=1/2 (50.0%) | 372tok | 0.73s
+L2M      | pred='my' | pos_acc=2/2 (100.0%) | 511tok | 1.77s
+L2M-DV   | pred='my' | pos_acc=2/2 (100.0%) | 766tok | 2.88s
+Baseline | pred='nn' | pos_acc=1/2 (50.0%) | 346tok | 1.05s
+CoT      | pred='nn' | pos_acc=1/2 (50.0%) | 371tok | 0.94s
+L2M      | pred='ny' | pos_acc=2/2 (100.0%) | 506tok | 1.77s
+L2M-DV   | pred='ny' | pos_acc=2/2 (100.0%) | 772tok | 4.53s
+Baseline | pred='yt' | pos_acc=1/2 (50.0%) | 348tok | 0.82s
+CoT      | pred='yt' | pos_acc=1/2 (50.0%) | 373tok | 0.83s
+L2M      | pred='ym' | pos_acc=2/2 (100.0%) | 508tok | 1.92s
+L2M-DV   | pred='ym' | pos_acc=2/2 (100.0%) | 773tok | 4.67s
+Baseline | pred='rr' | pos_acc=1/2 (50.0%) | 346tok | 0.71s
+CoT      | pred='rr' | pos_acc=1/2 (50.0%) | 371tok | 0.75s
+L2M      | pred='rn' | pos_acc=2/2 (100.0%) | 506tok | 1.56s
+L2M-DV   | pred='rn' | pos_acc=2/2 (100.0%) | 715tok | 2.83s
+Baseline | pred='yy' | pos_acc=2/2 (100.0%) | 346tok | 1.33s
+CoT      | pred='yy' | pos_acc=2/2 (100.0%) | 371tok | 0.91s
+L2M      | pred='yy' | pos_acc=2/2 (100.0%) | 510tok | 2.05s
+L2M-DV   | pred='yy' | pos_acc=2/2 (100.0%) | 769tok | 3.05s
+Baseline | pred='yn' | pos_acc=1/2 (50.0%) | 347tok | 1.22s
+CoT      | pred='yn' | pos_acc=1/2 (50.0%) | 372tok | 0.93s
+L2M      | pred='ye' | pos_acc=2/2 (100.0%) | 544tok | 1.35s
+L2M-DV   | pred='yy' | pos_acc=1/2 (50.0%) | 724tok | 2.56s
+Baseline | pred='ly' | pos_acc=1/2 (50.0%) | 346tok | 0.90s
+CoT      | pred='ly' | pos_acc=1/2 (50.0%) | 371tok | 0.79s
+L2M      | pred='yy' | pos_acc=2/2 (100.0%) | 510tok | 1.58s
+L2M-DV   | pred='yy' | pos_acc=2/2 (100.0%) | 730tok | 2.94s
+Baseline | pred='gn' | pos_acc=2/2 (100.0%) | 343tok | 1.30s
+CoT      | pred='gn' | pos_acc=2/2 (100.0%) | 368tok | 0.93s
+L2M      | pred='gn' | pos_acc=2/2 (100.0%) | 507tok | 2.08s
+L2M-DV   | pred='gn' | pos_acc=2/2 (100.0%) | 719tok | 2.78s
+Baseline | pred='ry' | pos_acc=2/2 (100.0%) | 345tok | 0.83s
+CoT      | pred='ry' | pos_acc=2/2 (100.0%) | 370tok | 0.88s
+L2M      | pred='ry' | pos_acc=2/2 (100.0%) | 509tok | 1.57s
+L2M-DV   | pred='ry' | pos_acc=2/2 (100.0%) | 768tok | 3.37s
+Baseline | pred='et' | pos_acc=1/2 (50.0%) | 349tok | 1.20s
+CoT      | pred='et' | pos_acc=1/2 (50.0%) | 374tok | 1.48s
+L2M      | pred='ee' | pos_acc=2/2 (100.0%) | 509tok | 1.31s
+L2M-DV   | pred='ee' | pos_acc=2/2 (100.0%) | 728tok | 2.73s
+Baseline | pred='yg' | pos_acc=1/2 (50.0%) | 345tok | 0.76s
+CoT      | pred='yg' | pos_acc=1/2 (50.0%) | 370tok | 0.77s
+L2M      | pred='yx' | pos_acc=2/2 (100.0%) | 510tok | 1.40s
+L2M-DV   | pred='yy' | pos_acc=1/2 (50.0%) | 722tok | 2.74s
+Baseline | pred='ye' | pos_acc=2/2 (100.0%) | 345tok | 0.95s
+CoT      | pred='ye' | pos_acc=2/2 (100.0%) | 370tok | 0.87s
+L2M      | pred='ye' | pos_acc=2/2 (100.0%) | 509tok | 1.51s
+L2M-DV   | pred='ye' | pos_acc=2/2 (100.0%) | 721tok | 2.21s
+Baseline | pred='ny' | pos_acc=2/2 (100.0%) | 344tok | 1.05s
+CoT      | pred='ny' | pos_acc=2/2 (100.0%) | 369tok | 0.71s
+L2M      | pred='ny' | pos_acc=2/2 (100.0%) | 508tok | 1.22s
+L2M-DV   | pred='ny' | pos_acc=2/2 (100.0%) | 729tok | 2.24s
+Baseline | pred='ng' | pos_acc=1/2 (50.0%) | 347tok | 1.04s
+CoT      | pred='no' | pos_acc=1/2 (50.0%) | 372tok | 1.57s
+L2M      | pred='ny' | pos_acc=2/2 (100.0%) | 511tok | 1.31s
+L2M-DV   | pred='ny' | pos_acc=2/2 (100.0%) | 766tok | 2.29s
+Baseline | pred='nn' | pos_acc=1/2 (50.0%) | 347tok | 0.81s
+CoT      | pred='nn' | pos_acc=1/2 (50.0%) | 372tok | 0.71s
+L2M      | pred='nc' | pos_acc=2/2 (100.0%) | 511tok | 1.48s
+L2M-DV   | pred='nc' | pos_acc=2/2 (100.0%) | 727tok | 3.50s
+
+### Batch Summary (n_words=2)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  67.50% | 6,919 | 0.931s |
+| CoT      |  67.50% | 7,419 | 0.952s |
+| L2M      | 100.00% | 10,205 | 1.605s |
+| L2M-DV   |  95.00% | 14,829 | 2.922s |
+
+======================================================================
+num_words = 3 | batch_size = 20
+Baseline | pred='lnn' | pos_acc=2/3 (66.7%) | 352tok | 1.09s
+CoT      | pred='lnn' | pos_acc=2/3 (66.7%) | 377tok | 1.01s
+L2M      | pred='ynn' | pos_acc=3/3 (100.0%) | 520tok | 1.55s
+L2M-DV   | pred='ynn' | pos_acc=3/3 (100.0%) | 729tok | 1.91s
+Baseline | pred='sns' | pos_acc=1/3 (33.3%) | 349tok | 1.01s
+CoT      | pred='sns' | pos_acc=1/3 (33.3%) | 374tok | 1.01s
+L2M      | pred='sln' | pos_acc=3/3 (100.0%) | 518tok | 1.31s
+L2M-DV   | pred='sln' | pos_acc=3/3 (100.0%) | 783tok | 4.53s
+Baseline | pred='nyr' | pos_acc=2/3 (66.7%) | 348tok | 0.70s
+CoT      | pred='nyr' | pos_acc=2/3 (66.7%) | 373tok | 1.21s
+L2M      | pred='nyy' | pos_acc=3/3 (100.0%) | 516tok | 1.75s
+L2M-DV   | pred='nyy' | pos_acc=3/3 (100.0%) | 729tok | 3.97s
+Baseline | pred='yry' | pos_acc=2/3 (66.7%) | 350tok | 1.05s
+CoT      | pred='yyy' | pos_acc=3/3 (100.0%) | 375tok | 0.81s
+L2M      | pred='yyy' | pos_acc=3/3 (100.0%) | 518tok | 1.78s
+L2M-DV   | pred='yyy' | pos_acc=3/3 (100.0%) | 727tok | 3.58s
+Baseline | pred='yms' | pos_acc=2/3 (66.7%) | 350tok | 0.86s
+CoT      | pred='yms' | pos_acc=2/3 (66.7%) | 375tok | 0.91s
+L2M      | pred='ymy' | pos_acc=3/3 (100.0%) | 518tok | 1.34s
+L2M-DV   | pred='ymy' | pos_acc=3/3 (100.0%) | 727tok | 1.60s
+Baseline | pred='nen' | pos_acc=1/3 (33.3%) | 351tok | 0.75s
+CoT      | pred='nen' | pos_acc=1/3 (33.3%) | 376tok | 0.76s
+L2M      | pred='nye' | pos_acc=3/3 (100.0%) | 519tok | 1.94s
+L2M-DV   | pred='nye' | pos_acc=3/3 (100.0%) | 778tok | 4.91s
+Baseline | pred='lyt' | pos_acc=1/3 (33.3%) | 351tok | 1.76s
+CoT      | pred='lyt' | pos_acc=1/3 (33.3%) | 376tok | 0.89s
+L2M      | pred='yyl' | pos_acc=3/3 (100.0%) | 519tok | 1.71s
+L2M-DV   | pred='yyl' | pos_acc=3/3 (100.0%) | 735tok | 2.61s
+Baseline | pred='eon' | pos_acc=1/3 (33.3%) | 350tok | 0.79s
+CoT      | pred='eon' | pos_acc=1/3 (33.3%) | 375tok | 0.92s
+L2M      | pred='eny' | pos_acc=3/3 (100.0%) | 541tok | 2.12s
+L2M-DV   | pred='eny' | pos_acc=3/3 (100.0%) | 734tok | 3.36s
+Baseline | pred='mty' | pos_acc=1/3 (33.3%) | 352tok | 1.94s
+CoT      | pred='lyt' | pos_acc=1/3 (33.3%) | 377tok | 0.81s
+L2M      | pred='myl' | pos_acc=3/3 (100.0%) | 528tok | 1.33s
+L2M-DV   | pred='myl' | pos_acc=3/3 (100.0%) | 735tok | 3.00s
+Baseline | pred='yms' | pos_acc=2/3 (66.7%) | 349tok | 0.90s
+CoT      | pred='yms' | pos_acc=2/3 (66.7%) | 374tok | 1.40s
+L2M      | pred='ymn' | pos_acc=3/3 (100.0%) | 517tok | 1.55s
+L2M-DV   | pred='ymn' | pos_acc=3/3 (100.0%) | 733tok | 2.28s
+Baseline | pred='nly' | pos_acc=2/3 (66.7%) | 349tok | 0.88s
+CoT      | pred='nly' | pos_acc=2/3 (66.7%) | 374tok | 0.78s
+L2M      | pred='nyy' | pos_acc=3/3 (100.0%) | 517tok | 1.59s
+L2M-DV   | pred='nyy' | pos_acc=3/3 (100.0%) | 724tok | 2.14s
+Baseline | pred='ynl' | pos_acc=3/3 (100.0%) | 368tok | 1.39s
+CoT      | pred='yno' | pos_acc=2/3 (66.7%) | 375tok | 1.27s
+L2M      | pred='ynl' | pos_acc=3/3 (100.0%) | 524tok | 1.57s
+L2M-DV   | pred='ynl' | pos_acc=3/3 (100.0%) | 784tok | 3.25s
+Baseline | pred='myy' | pos_acc=3/3 (100.0%) | 352tok | 0.91s
+CoT      | pred='mty' | pos_acc=2/3 (66.7%) | 377tok | 0.85s
+L2M      | pred='mty' | pos_acc=2/3 (66.7%) | 528tok | 2.70s
+L2M-DV   | pred='myy' | pos_acc=3/3 (100.0%) | 726tok | 4.23s
+Baseline | pred='non' | pos_acc=2/3 (66.7%) | 346tok | 0.74s
+CoT      | pred='non' | pos_acc=2/3 (66.7%) | 371tok | 0.95s
+L2M      | pred='nnn' | pos_acc=3/3 (100.0%) | 515tok | 1.14s
+L2M-DV   | pred='nnn' | pos_acc=3/3 (100.0%) | 727tok | 2.11s
+Baseline | pred='eyy' | pos_acc=3/3 (100.0%) | 351tok | 1.24s
+CoT      | pred='eyy' | pos_acc=3/3 (100.0%) | 376tok | 0.84s
+L2M      | pred='eyy' | pos_acc=3/3 (100.0%) | 528tok | 1.65s
+L2M-DV   | pred='eyy' | pos_acc=3/3 (100.0%) | 789tok | 3.22s
+Baseline | pred='nss' | pos_acc=2/3 (66.7%) | 350tok | 1.02s
+CoT      | pred='nss' | pos_acc=2/3 (66.7%) | 375tok | 0.81s
+L2M      | pred='nsm' | pos_acc=3/3 (100.0%) | 518tok | 2.27s
+L2M-DV   | pred='nsm' | pos_acc=3/3 (100.0%) | 727tok | 2.22s
+Baseline | pred='yln' | pos_acc=2/3 (66.7%) | 352tok | 0.98s
+CoT      | pred='yln' | pos_acc=2/3 (66.7%) | 377tok | 0.72s
+L2M      | pred='yly' | pos_acc=3/3 (100.0%) | 520tok | 1.55s
+L2M-DV   | pred='yly' | pos_acc=3/3 (100.0%) | 728tok | 2.54s
+Baseline | pred='lly' | pos_acc=1/3 (33.3%) | 348tok | 0.69s
+CoT      | pred='lyy' | pos_acc=2/3 (66.7%) | 374tok | 0.66s
+L2M      | pred='yyy' | pos_acc=3/3 (100.0%) | 517tok | 1.37s
+L2M-DV   | pred='yyy' | pos_acc=3/3 (100.0%) | 777tok | 2.71s
+Baseline | pred='lnn' | pos_acc=2/3 (66.7%) | 348tok | 1.18s
+CoT      | pred='lnn' | pos_acc=2/3 (66.7%) | 373tok | 1.21s
+L2M      | pred='ynn' | pos_acc=3/3 (100.0%) | 516tok | 1.78s
+L2M-DV   | pred='ynn' | pos_acc=3/3 (100.0%) | 784tok | 4.19s
+Baseline | pred='non' | pos_acc=1/3 (33.3%) | 346tok | 0.90s
+CoT      | pred='nty' | pos_acc=1/3 (33.3%) | 372tok | 1.28s
+L2M      | pred='nym' | pos_acc=3/3 (100.0%) | 515tok | 1.45s
+L2M-DV   | pred='nym' | pos_acc=3/3 (100.0%) | 729tok | 2.39s
+
+### Batch Summary (n_words=3)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  60.00% | 7,012 | 1.038s |
+| CoT      |  60.00% | 7,496 | 0.955s |
+| L2M      |  98.33% | 10,412 | 1.673s |
+| L2M-DV   | 100.00% | 14,905 | 3.038s |
+
+======================================================================
+num_words = 4 | batch_size = 20
+Baseline | pred='lnnn' | pos_acc=4/4 (100.0%) | 352tok | 0.69s
+CoT      | pred='lnon' | pos_acc=3/4 (75.0%) | 376tok | 0.90s
+L2M      | pred='lnnn' | pos_acc=4/4 (100.0%) | 533tok | 1.63s
+L2M-DV   | pred='nnnn' | pos_acc=3/4 (75.0%) | 737tok | 2.45s
+Baseline | pred='nony' | pos_acc=3/4 (75.0%) | 352tok | 0.90s
+CoT      | pred='nnly' | pos_acc=3/4 (75.0%) | 377tok | 0.99s
+L2M      | pred='nnny' | pos_acc=4/4 (100.0%) | 524tok | 1.83s
+L2M-DV   | pred='nnny' | pos_acc=4/4 (100.0%) | 790tok | 3.65s
+Baseline | pred='yonn' | pos_acc=1/4 (25.0%) | 353tok | 0.82s
+CoT      | pred='yonn' | pos_acc=1/4 (25.0%) | 378tok | 0.86s
+L2M      | pred='ynys' | pos_acc=4/4 (100.0%) | 533tok | 1.54s
+L2M-DV   | pred='ynys' | pos_acc=4/4 (100.0%) | 730tok | 2.60s
+Baseline | pred='ylan' | pos_acc=2/4 (50.0%) | 354tok | 0.92s
+CoT      | pred='ylan' | pos_acc=2/4 (50.0%) | 379tok | 0.81s
+L2M      | pred='ylny' | pos_acc=4/4 (100.0%) | 527tok | 2.26s
+L2M-DV   | pred='ylny' | pos_acc=4/4 (100.0%) | 732tok | 2.53s
+Baseline | pred='lyny' | pos_acc=3/4 (75.0%) | 351tok | 1.12s
+CoT      | pred='ylyn' | pos_acc=1/4 (25.0%) | 376tok | 1.13s
+L2M      | pred='yynn' | pos_acc=3/4 (75.0%) | 529tok | 2.14s
+L2M-DV   | pred='yyny' | pos_acc=4/4 (100.0%) | 736tok | 2.07s
+Baseline | pred='ylyn' | pos_acc=2/4 (50.0%) | 357tok | 1.43s
+CoT      | pred='ylyn' | pos_acc=2/4 (50.0%) | 383tok | 0.75s
+L2M      | pred='yyen' | pos_acc=4/4 (100.0%) | 529tok | 1.73s
+L2M-DV   | pred='yyen' | pos_acc=4/4 (100.0%) | 739tok | 2.88s
+Baseline | pred='nnsc' | pos_acc=4/4 (100.0%) | 351tok | 1.14s
+CoT      | pred='nnss' | pos_acc=3/4 (75.0%) | 376tok | 1.26s
+L2M      | pred='nnsc' | pos_acc=4/4 (100.0%) | 523tok | 1.56s
+L2M-DV   | pred='nnsc' | pos_acc=4/4 (100.0%) | 742tok | 2.52s
+Baseline | pred='cnsmm' | pos_acc=3/4 (75.0%) | 354tok | 1.04s | len_mismatch(gold=4, pred=5)
+CoT      | pred='cnsmm' | pos_acc=3/4 (75.0%) | 379tok | 0.86s | len_mismatch(gold=4, pred=5)
+L2M      | pred='cnom' | pos_acc=3/4 (75.0%) | 533tok | 1.30s
+L2M-DV   | pred='cnnm' | pos_acc=4/4 (100.0%) | 794tok | 3.50s
+Baseline | pred='snly' | pos_acc=3/4 (75.0%) | 352tok | 0.85s
+CoT      | pred='snly' | pos_acc=3/4 (75.0%) | 377tok | 2.14s
+L2M      | pred='snyy' | pos_acc=4/4 (100.0%) | 524tok | 2.06s
+L2M-DV   | pred='snyy' | pos_acc=4/4 (100.0%) | 736tok | 2.19s
+Baseline | pred='eony' | pos_acc=3/4 (75.0%) | 351tok | 0.80s
+CoT      | pred='eony' | pos_acc=3/4 (75.0%) | 376tok | 1.35s
+L2M      | pred='eyny' | pos_acc=4/4 (100.0%) | 523tok | 1.39s
+L2M-DV   | pred='eyny' | pos_acc=4/4 (100.0%) | 741tok | 2.19s
+Baseline | pred='nvee' | pos_acc=2/4 (50.0%) | 351tok | 0.77s
+CoT      | pred='nvee' | pos_acc=2/4 (50.0%) | 376tok | 0.86s
+L2M      | pred='nese' | pos_acc=3/4 (75.0%) | 529tok | 1.06s
+L2M-DV   | pred='nene' | pos_acc=4/4 (100.0%) | 735tok | 2.66s
+Baseline | pred='llyg' | pos_acc=1/4 (25.0%) | 355tok | 0.84s
+CoT      | pred='lyyk' | pos_acc=2/4 (50.0%) | 381tok | 0.84s
+L2M      | pred='lyey' | pos_acc=4/4 (100.0%) | 531tok | 1.81s
+L2M-DV   | pred='lyey' | pos_acc=4/4 (100.0%) | 739tok | 3.50s
+Baseline | pred='ygly' | pos_acc=1/4 (25.0%) | 349tok | 0.86s
+CoT      | pred='ygyg' | pos_acc=2/4 (50.0%) | 375tok | 0.80s
+L2M      | pred='yyyn' | pos_acc=4/4 (100.0%) | 521tok | 1.30s
+L2M-DV   | pred='yyyn' | pos_acc=4/4 (100.0%) | 782tok | 2.68s
+Baseline | pred='nnyn' | pos_acc=3/4 (75.0%) | 354tok | 0.93s
+CoT      | pred='noyn' | pos_acc=3/4 (75.0%) | 379tok | 0.78s
+L2M      | pred='nyyn' | pos_acc=4/4 (100.0%) | 526tok | 1.47s
+L2M-DV   | pred='nyyn' | pos_acc=4/4 (100.0%) | 735tok | 2.06s
+Baseline | pred='mnve' | pos_acc=2/4 (50.0%) | 357tok | 0.80s
+CoT      | pred='msne' | pos_acc=3/4 (75.0%) | 382tok | 0.98s
+L2M      | pred='myne' | pos_acc=4/4 (100.0%) | 553tok | 2.19s
+L2M-DV   | pred='myne' | pos_acc=4/4 (100.0%) | 742tok | 2.92s
+Baseline | pred='lneny' | pos_acc=1/4 (25.0%) | 353tok | 1.03s | len_mismatch(gold=4, pred=5)
+CoT      | pred='lnen' | pos_acc=1/4 (25.0%) | 377tok | 1.01s
+L2M      | pred='leny' | pos_acc=4/4 (100.0%) | 524tok | 2.04s
+L2M-DV   | pred='leny' | pos_acc=4/4 (100.0%) | 788tok | 4.20s
+Baseline | pred='ytyl' | pos_acc=2/4 (50.0%) | 355tok | 0.76s
+CoT      | pred='ytyl' | pos_acc=2/4 (50.0%) | 380tok | 0.84s
+L2M      | pred='yynl' | pos_acc=4/4 (100.0%) | 536tok | 2.31s
+L2M-DV   | pred='yynl' | pos_acc=4/4 (100.0%) | 790tok | 2.51s
+Baseline | pred='nonn' | pos_acc=3/4 (75.0%) | 353tok | 0.92s
+CoT      | pred='nnno' | pos_acc=3/4 (75.0%) | 378tok | 1.29s
+L2M      | pred='nnnn' | pos_acc=4/4 (100.0%) | 526tok | 1.39s
+L2M-DV   | pred='nnnn' | pos_acc=4/4 (100.0%) | 739tok | 2.56s
+Baseline | pred='nonn' | pos_acc=3/4 (75.0%) | 351tok | 0.78s
+CoT      | pred='nnno' | pos_acc=3/4 (75.0%) | 376tok | 0.90s
+L2M      | pred='nnnn' | pos_acc=4/4 (100.0%) | 529tok | 3.06s
+L2M-DV   | pred='nnnn' | pos_acc=4/4 (100.0%) | 789tok | 3.48s
+Baseline | pred='nnys' | pos_acc=3/4 (75.0%) | 353tok | 0.92s
+CoT      | pred='nnnx' | pos_acc=3/4 (75.0%) | 379tok | 0.79s
+L2M      | pred='nnys' | pos_acc=3/4 (75.0%) | 533tok | 1.34s
+L2M-DV   | pred='nnyx' | pos_acc=4/4 (100.0%) | 798tok | 4.07s
+
+### Batch Summary (n_words=4)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  61.25% | 7,058 | 0.916s |
+| CoT      |  60.00% | 7,560 | 1.006s |
+| L2M      |  95.00% | 10,586 | 1.770s |
+| L2M-DV   |  98.75% | 15,114 | 2.862s |
+
+======================================================================
+num_words = 5 | batch_size = 20
+Baseline | pred='gnnoy' | pos_acc=3/5 (60.0%) | 357tok | 0.92s
+CoT      | pred='gnity' | pos_acc=3/5 (60.0%) | 381tok | 0.72s
+L2M      | pred='gnyny' | pos_acc=5/5 (100.0%) | 532tok | 1.61s
+L2M-DV   | pred='gnyny' | pos_acc=5/5 (100.0%) | 810tok | 5.25s
+Baseline | pred='yntcl' | pos_acc=3/5 (60.0%) | 359tok | 0.93s
+CoT      | pred='yntcl' | pos_acc=3/5 (60.0%) | 384tok | 0.90s
+L2M      | pred='ynyyl' | pos_acc=5/5 (100.0%) | 535tok | 1.75s
+L2M-DV   | pred='ynyyl' | pos_acc=5/5 (100.0%) | 751tok | 4.08s
+Baseline | pred='nnnll' | pos_acc=3/5 (60.0%) | 355tok | 0.79s
+CoT      | pred='nnnll' | pos_acc=3/5 (60.0%) | 380tok | 0.87s
+L2M      | pred='nnenl' | pos_acc=5/5 (100.0%) | 531tok | 1.96s
+L2M-DV   | pred='nnenl' | pos_acc=5/5 (100.0%) | 800tok | 3.40s
+Baseline | pred='esyity' | pos_acc=1/5 (20.0%) | 359tok | 1.41s | len_mismatch(gold=5, pred=6)
+CoT      | pred='esyyt' | pos_acc=2/5 (40.0%) | 384tok | 0.83s
+L2M      | pred='enxyy' | pos_acc=5/5 (100.0%) | 535tok | 2.13s
+L2M-DV   | pred='enxyy' | pos_acc=5/5 (100.0%) | 752tok | 2.20s
+Baseline | pred='oylnn' | pos_acc=3/5 (60.0%) | 359tok | 0.91s
+CoT      | pred='oylnn' | pos_acc=3/5 (60.0%) | 384tok | 1.00s
+L2M      | pred='mmlnn' | pos_acc=4/5 (80.0%) | 567tok | 1.76s
+L2M-DV   | pred='ymlnn' | pos_acc=5/5 (100.0%) | 752tok | 2.47s
+Baseline | pred='nnlnt' | pos_acc=3/5 (60.0%) | 357tok | 0.82s
+CoT      | pred='nnlnt' | pos_acc=3/5 (60.0%) | 382tok | 1.03s
+L2M      | pred='nnyny' | pos_acc=5/5 (100.0%) | 532tok | 1.66s
+L2M-DV   | pred='nnyny' | pos_acc=5/5 (100.0%) | 743tok | 3.58s
+Baseline | pred='nyrln' | pos_acc=3/5 (60.0%) | 353tok | 1.02s
+CoT      | pred='nyrln' | pos_acc=3/5 (60.0%) | 378tok | 1.41s
+L2M      | pred='nylm' | pos_acc=2/5 (40.0%) | 528tok | 1.73s | len_mismatch(gold=5, pred=4)
+L2M-DV   | pred='nyylm' | pos_acc=5/5 (100.0%) | 747tok | 2.28s
+Baseline | pred='nonnn' | pos_acc=4/5 (80.0%) | 352tok | 0.84s
+CoT      | pred='nnnot' | pos_acc=2/5 (40.0%) | 377tok | 1.31s
+L2M      | pred='nennn' | pos_acc=5/5 (100.0%) | 529tok | 2.62s
+L2M-DV   | pred='nennn' | pos_acc=5/5 (100.0%) | 792tok | 3.77s
+Baseline | pred='nlyty' | pos_acc=3/5 (60.0%) | 356tok | 0.94s
+CoT      | pred='nlyty' | pos_acc=3/5 (60.0%) | 381tok | 1.06s
+L2M      | pred='nyyyy' | pos_acc=5/5 (100.0%) | 531tok | 1.81s
+L2M-DV   | pred='nyyyy' | pos_acc=5/5 (100.0%) | 790tok | 3.16s
+Baseline | pred='yynnt' | pos_acc=2/5 (40.0%) | 358tok | 0.93s
+CoT      | pred='yynnt' | pos_acc=2/5 (40.0%) | 383tok | 0.90s
+L2M      | pred='yyyyn' | pos_acc=5/5 (100.0%) | 534tok | 1.56s
+L2M-DV   | pred='yyyyn' | pos_acc=5/5 (100.0%) | 744tok | 2.71s
+Baseline | pred='nonyn' | pos_acc=4/5 (80.0%) | 355tok | 1.00s
+CoT      | pred='nonyn' | pos_acc=4/5 (80.0%) | 380tok | 1.23s
+L2M      | pred='nsnyn' | pos_acc=5/5 (100.0%) | 532tok | 1.65s
+L2M-DV   | pred='nsnyn' | pos_acc=5/5 (100.0%) | 747tok | 2.08s
+Baseline | pred='enlan' | pos_acc=3/5 (60.0%) | 354tok | 0.86s
+CoT      | pred='ennaln' | pos_acc=3/5 (60.0%) | 380tok | 0.89s | len_mismatch(gold=5, pred=6)
+L2M      | pred='enlan' | pos_acc=3/5 (60.0%) | 538tok | 1.35s
+L2M-DV   | pred='ennln' | pos_acc=5/5 (100.0%) | 808tok | 3.71s
+Baseline | pred='esete' | pos_acc=2/5 (40.0%) | 358tok | 1.27s
+CoT      | pred='esene' | pos_acc=2/5 (40.0%) | 383tok | 0.91s
+L2M      | pred='eleen' | pos_acc=5/5 (100.0%) | 534tok | 1.98s
+L2M-DV   | pred='eleen' | pos_acc=5/5 (100.0%) | 751tok | 2.67s
+Baseline | pred='eynlly' | pos_acc=2/5 (40.0%) | 358tok | 1.33s | len_mismatch(gold=5, pred=6)
+CoT      | pred='eynlly' | pos_acc=2/5 (40.0%) | 383tok | 0.87s | len_mismatch(gold=5, pred=6)
+L2M      | pred='eymty' | pos_acc=5/5 (100.0%) | 533tok | 1.96s
+L2M-DV   | pred='eymty' | pos_acc=5/5 (100.0%) | 745tok | 2.05s
+Baseline | pred='mlern' | pos_acc=2/5 (40.0%) | 358tok | 1.03s
+CoT      | pred='mlern' | pos_acc=2/5 (40.0%) | 383tok | 1.02s
+L2M      | pred='meyln' | pos_acc=5/5 (100.0%) | 557tok | 2.45s
+L2M-DV   | pred='meyln' | pos_acc=5/5 (100.0%) | 751tok | 2.09s
+Baseline | pred='yntnx' | pos_acc=4/5 (80.0%) | 360tok | 0.68s
+CoT      | pred='yntnx' | pos_acc=4/5 (80.0%) | 385tok | 1.03s
+L2M      | pred='ynynx' | pos_acc=5/5 (100.0%) | 536tok | 1.87s
+L2M-DV   | pred='ynynx' | pos_acc=5/5 (100.0%) | 753tok | 4.72s
+Baseline | pred='nysnm' | pos_acc=4/5 (80.0%) | 358tok | 0.75s
+CoT      | pred='nysnm' | pos_acc=4/5 (80.0%) | 383tok | 0.83s
+L2M      | pred='nyynm' | pos_acc=5/5 (100.0%) | 534tok | 1.83s
+L2M-DV   | pred='nynym' | pos_acc=3/5 (60.0%) | 751tok | 3.11s
+Baseline | pred='yynll' | pos_acc=4/5 (80.0%) | 356tok | 0.67s
+CoT      | pred='yynll' | pos_acc=4/5 (80.0%) | 381tok | 0.95s
+L2M      | pred='yynly' | pos_acc=5/5 (100.0%) | 537tok | 1.50s
+L2M-DV   | pred='yynly' | pos_acc=5/5 (100.0%) | 741tok | 2.25s
+Baseline | pred='elnon' | pos_acc=2/5 (40.0%) | 354tok | 1.03s
+CoT      | pred='elnin' | pos_acc=2/5 (40.0%) | 379tok | 1.18s
+L2M      | pred='elnnn' | pos_acc=2/5 (40.0%) | 539tok | 1.53s
+L2M-DV   | pred='ennys' | pos_acc=5/5 (100.0%) | 798tok | 3.90s
+Baseline | pred='ylnnm' | pos_acc=4/5 (80.0%) | 356tok | 0.82s
+CoT      | pred='ylnsm' | pos_acc=3/5 (60.0%) | 381tok | 0.77s
+L2M      | pred='yltnm' | pos_acc=5/5 (100.0%) | 539tok | 2.70s
+L2M-DV   | pred='yltnm' | pos_acc=5/5 (100.0%) | 749tok | 2.41s
+
+### Batch Summary (n_words=5)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  59.00% | 7,132 | 0.947s |
+| CoT      |  57.00% | 7,632 | 0.985s |
+| L2M      |  91.00% | 10,733 | 1.870s |
+| L2M-DV   |  98.00% | 15,275 | 3.095s |
+
+======================================================================
+num_words = 6 | batch_size = 20
+Baseline | pred='lyycne' | pos_acc=2/6 (33.3%) | 364tok | 1.01s
+CoT      | pred='lyycce' | pos_acc=2/6 (33.3%) | 389tok | 1.08s
+L2M      | pred='lynye' | pos_acc=5/6 (83.3%) | 552tok | 1.83s | len_mismatch(gold=6, pred=5)
+L2M-DV   | pred='lynyyc' | pos_acc=5/6 (83.3%) | 751tok | 2.17s
+Baseline | pred='ytnnom' | pos_acc=4/6 (66.7%) | 359tok | 1.01s
+CoT      | pred='ytnnom' | pos_acc=4/6 (66.7%) | 384tok | 1.01s
+L2M      | pred='ytmnnm' | pos_acc=6/6 (100.0%) | 572tok | 2.28s
+L2M-DV   | pred='ytmnnm' | pos_acc=6/6 (100.0%) | 820tok | 3.67s
+Baseline | pred='ymglln' | pos_acc=3/6 (50.0%) | 361tok | 1.13s
+CoT      | pred='ymglln' | pos_acc=3/6 (50.0%) | 386tok | 0.82s
+L2M      | pred='ymnlry' | pos_acc=6/6 (100.0%) | 544tok | 1.67s
+L2M-DV   | pred='ymnlry' | pos_acc=6/6 (100.0%) | 818tok | 3.54s
+Baseline | pred='yymnnn' | pos_acc=6/6 (100.0%) | 365tok | 0.80s
+CoT      | pred='yymnon' | pos_acc=5/6 (83.3%) | 389tok | 0.96s
+L2M      | pred='yymnon' | pos_acc=5/6 (83.3%) | 569tok | 4.19s
+L2M-DV   | pred='yymnnn' | pos_acc=6/6 (100.0%) | 777tok | 2.90s
+Baseline | pred='ylynny' | pos_acc=4/6 (66.7%) | 364tok | 1.39s
+CoT      | pred='ylynny' | pos_acc=4/6 (66.7%) | 389tok | 1.05s
+L2M      | pred='yyenny' | pos_acc=6/6 (100.0%) | 547tok | 1.60s
+L2M-DV   | pred='yyenyy' | pos_acc=5/6 (83.3%) | 810tok | 3.47s
+Baseline | pred='nndner' | pos_acc=2/6 (33.3%) | 357tok | 1.23s
+CoT      | pred='nnctyn' | pos_acc=3/6 (50.0%) | 382tok | 0.91s
+L2M      | pred='nnctyn' | pos_acc=3/6 (50.0%) | 562tok | 1.56s
+L2M-DV   | pred='nnceny' | pos_acc=6/6 (100.0%) | 757tok | 1.95s
+Baseline | pred='etctnn' | pos_acc=3/6 (50.0%) | 358tok | 0.90s
+CoT      | pred='erctnn' | pos_acc=3/6 (50.0%) | 383tok | 0.87s
+L2M      | pred='eycltn' | pos_acc=6/6 (100.0%) | 538tok | 1.94s
+L2M-DV   | pred='eyclln' | pos_acc=5/6 (83.3%) | 748tok | 2.71s
+Baseline | pred='nonnns' | pos_acc=3/6 (50.0%) | 356tok | 0.98s
+CoT      | pred='nnllnn' | pos_acc=5/6 (83.3%) | 381tok | 0.75s
+L2M      | pred='nnnnnn' | pos_acc=5/6 (83.3%) | 537tok | 1.45s
+L2M-DV   | pred='nnlnnn' | pos_acc=6/6 (100.0%) | 815tok | 3.10s
+Baseline | pred='snynly' | pos_acc=6/6 (100.0%) | 359tok | 0.62s
+CoT      | pred='slnyll' | pos_acc=2/6 (33.3%) | 384tok | 0.82s
+L2M      | pred='snynly' | pos_acc=6/6 (100.0%) | 539tok | 1.90s
+L2M-DV   | pred='snynly' | pos_acc=6/6 (100.0%) | 815tok | 3.70s
+Baseline | pred='nlynon' | pos_acc=3/6 (50.0%) | 357tok | 0.80s
+CoT      | pred='nlynal' | pos_acc=3/6 (50.0%) | 382tok | 0.90s
+L2M      | pred='nyynny' | pos_acc=6/6 (100.0%) | 537tok | 1.55s
+L2M-DV   | pred='nynnny' | pos_acc=5/6 (83.3%) | 757tok | 2.29s
+Baseline | pred='eennly' | pos_acc=3/6 (50.0%) | 357tok | 0.77s
+CoT      | pred='eennly' | pos_acc=3/6 (50.0%) | 382tok | 1.45s
+L2M      | pred='enynyy' | pos_acc=6/6 (100.0%) | 537tok | 1.65s
+L2M-DV   | pred='enynyy' | pos_acc=6/6 (100.0%) | 812tok | 3.96s
+Baseline | pred='sgnyen' | pos_acc=6/6 (100.0%) | 357tok | 0.93s
+CoT      | pred='sgnyen' | pos_acc=6/6 (100.0%) | 382tok | 0.78s
+L2M      | pred='sgnyen' | pos_acc=6/6 (100.0%) | 546tok | 2.17s
+L2M-DV   | pred='sgnyen' | pos_acc=6/6 (100.0%) | 801tok | 3.04s
+Baseline | pred='eyyonn' | pos_acc=2/6 (33.3%) | 359tok | 0.70s
+CoT      | pred='eyyonn' | pos_acc=2/6 (33.3%) | 384tok | 0.99s
+L2M      | pred='eynnyy' | pos_acc=6/6 (100.0%) | 540tok | 1.39s
+L2M-DV   | pred='eynnyy' | pos_acc=6/6 (100.0%) | 761tok | 3.64s
+Baseline | pred='ylnnno' | pos_acc=3/6 (50.0%) | 363tok | 1.22s
+CoT      | pred='ylnnno' | pos_acc=3/6 (50.0%) | 388tok | 0.89s
+L2M      | pred='ylmmnn' | pos_acc=4/6 (66.7%) | 549tok | 2.75s
+L2M-DV   | pred='ylmmnn' | pos_acc=4/6 (66.7%) | 763tok | 2.38s
+Baseline | pred='yntnll' | pos_acc=3/6 (50.0%) | 364tok | 0.95s
+CoT      | pred='yntnln' | pos_acc=2/6 (33.3%) | 389tok | 0.86s
+L2M      | pred='ynynnl' | pos_acc=5/6 (83.3%) | 543tok | 1.78s
+L2M-DV   | pred='ynyynl' | pos_acc=6/6 (100.0%) | 823tok | 3.22s
+Baseline | pred='ylnrry' | pos_acc=3/6 (50.0%) | 357tok | 0.97s
+CoT      | pred='ynoerx' | pos_acc=2/6 (33.3%) | 382tok | 0.96s
+L2M      | pred='ynmrny' | pos_acc=6/6 (100.0%) | 536tok | 1.28s
+L2M-DV   | pred='ynmrny' | pos_acc=6/6 (100.0%) | 795tok | 3.57s
+Baseline | pred='eennno' | pos_acc=3/6 (50.0%) | 356tok | 0.70s
+CoT      | pred='eenynn' | pos_acc=5/6 (83.3%) | 381tok | 1.14s
+L2M      | pred='eenyon' | pos_acc=4/6 (66.7%) | 543tok | 1.85s
+L2M-DV   | pred='eynynn' | pos_acc=6/6 (100.0%) | 812tok | 3.35s
+Baseline | pred='yynlal' | pos_acc=3/6 (50.0%) | 357tok | 1.13s
+CoT      | pred='yynlal' | pos_acc=3/6 (50.0%) | 382tok | 0.81s
+L2M      | pred='yynlne' | pos_acc=4/6 (66.7%) | 547tok | 1.35s
+L2M-DV   | pred='yyylny' | pos_acc=6/6 (100.0%) | 811tok | 4.95s
+Baseline | pred='ngnlyg' | pos_acc=3/6 (50.0%) | 358tok | 1.52s
+CoT      | pred='nglygc' | pos_acc=2/6 (33.3%) | 382tok | 0.87s
+L2M      | pred='nynycg' | pos_acc=6/6 (100.0%) | 542tok | 1.67s
+L2M-DV   | pred='nynycg' | pos_acc=6/6 (100.0%) | 750tok | 1.94s
+Baseline | pred='nyrtyy' | pos_acc=3/6 (50.0%) | 356tok | 0.76s
+CoT      | pred='nyrtyy' | pos_acc=3/6 (50.0%) | 381tok | 1.03s
+L2M      | pred='nynyny' | pos_acc=6/6 (100.0%) | 534tok | 1.76s
+L2M-DV   | pred='nynyny' | pos_acc=6/6 (100.0%) | 790tok | 3.12s
+
+### Batch Summary (n_words=6)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  56.67% | 7,184 | 0.977s |
+| CoT      |  54.17% | 7,682 | 0.947s |
+| L2M      |  89.17% | 10,914 | 1.881s |
+| L2M-DV   |  95.00% | 15,786 | 3.133s |
+
+======================================================================
+num_words = 7 | batch_size = 20
+Baseline | pred='ialnlnn' | pos_acc=4/7 (57.1%) | 361tok | 0.67s
+CoT      | pred='yelnoon' | pos_acc=4/7 (57.1%) | 389tok | 1.51s
+L2M      | pred='yecnlnn' | pos_acc=7/7 (100.0%) | 555tok | 2.10s
+L2M-DV   | pred='yecnlnn' | pos_acc=7/7 (100.0%) | 828tok | 4.13s
+Baseline | pred='nnntnon' | pos_acc=3/7 (42.9%) | 368tok | 3.07s
+CoT      | pred='nnntnon' | pos_acc=3/7 (42.9%) | 393tok | 0.80s
+L2M      | pred='nonnnne' | pos_acc=6/7 (85.7%) | 580tok | 2.12s
+L2M-DV   | pred='nynnnne' | pos_acc=7/7 (100.0%) | 777tok | 3.61s
+Baseline | pred='eytlynn' | pos_acc=5/7 (71.4%) | 365tok | 0.66s
+CoT      | pred='eenlynn' | pos_acc=4/7 (57.1%) | 389tok | 1.75s
+L2M      | pred='eymlyyn' | pos_acc=7/7 (100.0%) | 549tok | 1.76s
+L2M-DV   | pred='eyclyyn' | pos_acc=6/7 (85.7%) | 756tok | 2.78s
+Baseline | pred='nsslnnn' | pos_acc=6/7 (85.7%) | 363tok | 0.79s
+CoT      | pred='nsslln' | pos_acc=4/7 (57.1%) | 389tok | 0.79s | len_mismatch(gold=7, pred=6)
+L2M      | pred='nsrlnnn' | pos_acc=7/7 (100.0%) | 552tok | 1.80s
+L2M-DV   | pred='nsrlnnn' | pos_acc=7/7 (100.0%) | 772tok | 2.63s
+Baseline | pred='nglynonn' | pos_acc=4/7 (57.1%) | 360tok | 1.13s | len_mismatch(gold=7, pred=8)
+CoT      | pred='nglynnn' | pos_acc=4/7 (57.1%) | 385tok | 1.48s
+L2M      | pred='ngylnln' | pos_acc=7/7 (100.0%) | 553tok | 1.76s
+L2M-DV   | pred='ngylnln' | pos_acc=7/7 (100.0%) | 809tok | 2.82s
+Baseline | pred='nnllyee' | pos_acc=2/7 (28.6%) | 360tok | 1.14s
+CoT      | pred='nnnyeno' | pos_acc=3/7 (42.9%) | 384tok | 0.86s
+L2M      | pred='nnngnen' | pos_acc=5/7 (71.4%) | 553tok | 1.44s
+L2M-DV   | pred='nynyen' | pos_acc=4/7 (57.1%) | 766tok | 2.97s | len_mismatch(gold=7, pred=6)
+Baseline | pred='yllnnsss' | pos_acc=5/7 (71.4%) | 361tok | 0.76s | len_mismatch(gold=7, pred=8)
+CoT      | pred='yllnnss' | pos_acc=5/7 (71.4%) | 386tok | 0.86s
+L2M      | pred='ylynnns' | pos_acc=7/7 (100.0%) | 545tok | 1.32s
+L2M-DV   | pred='ylynnns' | pos_acc=7/7 (100.0%) | 770tok | 2.51s
+Baseline | pred='ialnnnn' | pos_acc=4/7 (57.1%) | 358tok | 1.33s
+CoT      | pred='lnnnntn' | pos_acc=6/7 (85.7%) | 388tok | 0.92s
+L2M      | pred='lnnnnnn' | pos_acc=7/7 (100.0%) | 555tok | 2.51s
+L2M-DV   | pred='lnnnnnn' | pos_acc=7/7 (100.0%) | 771tok | 3.17s
+Baseline | pred='lmlrvey' | pos_acc=3/7 (42.9%) | 364tok | 1.02s
+CoT      | pred='lmslvey' | pos_acc=3/7 (42.9%) | 389tok | 0.89s
+L2M      | pred='lmlleny' | pos_acc=6/7 (85.7%) | 546tok | 1.89s
+L2M-DV   | pred='nmlleny' | pos_acc=7/7 (100.0%) | 769tok | 2.13s
+Baseline | pred='lnnlety' | pos_acc=3/7 (42.9%) | 365tok | 1.02s
+CoT      | pred='lnnllyy' | pos_acc=5/7 (71.4%) | 391tok | 0.83s
+L2M      | pred='lnnleei' | pos_acc=2/7 (28.6%) | 564tok | 1.44s
+L2M-DV   | pred='lneelyy' | pos_acc=7/7 (100.0%) | 774tok | 2.32s
+Baseline | pred='ialynyr' | pos_acc=3/7 (42.9%) | 360tok | 0.62s
+CoT      | pred='lytngyr' | pos_acc=3/7 (42.9%) | 389tok | 0.79s
+L2M      | pred='lyenyyy' | pos_acc=5/7 (71.4%) | 547tok | 1.79s
+L2M-DV   | pred='lyeynyy' | pos_acc=7/7 (100.0%) | 828tok | 4.83s
+Baseline | pred='nneneey' | pos_acc=4/7 (57.1%) | 363tok | 0.67s
+CoT      | pred='nnneyny' | pos_acc=2/7 (28.6%) | 389tok | 1.82s
+L2M      | pred='nyennyy' | pos_acc=7/7 (100.0%) | 554tok | 2.22s
+L2M-DV   | pred='nyennyy' | pos_acc=7/7 (100.0%) | 772tok | 3.85s
+Baseline | pred='nnynlny' | pos_acc=4/7 (57.1%) | 362tok | 0.90s
+CoT      | pred='nnynlny' | pos_acc=4/7 (57.1%) | 387tok | 1.04s
+L2M      | pred='nnytnly' | pos_acc=7/7 (100.0%) | 552tok | 2.02s
+L2M-DV   | pred='nnytnly' | pos_acc=7/7 (100.0%) | 826tok | 3.76s
+Baseline | pred='lnnlnnl' | pos_acc=2/7 (28.6%) | 360tok | 0.92s
+CoT      | pred='lnnlnnl' | pos_acc=2/7 (28.6%) | 385tok | 0.81s
+L2M      | pred='ylnnlln' | pos_acc=6/7 (85.7%) | 550tok | 1.54s
+L2M-DV   | pred='ynnnlln' | pos_acc=7/7 (100.0%) | 822tok | 3.59s
+Baseline | pred='ylynyll' | pos_acc=2/7 (28.6%) | 362tok | 1.36s
+CoT      | pred='ylyynll' | pos_acc=4/7 (57.1%) | 387tok | 0.85s
+L2M      | pred='yynynyl' | pos_acc=7/7 (100.0%) | 551tok | 1.98s
+L2M-DV   | pred='yynynyl' | pos_acc=7/7 (100.0%) | 771tok | 2.47s
+Baseline | pred='yntlnss' | pos_acc=4/7 (57.1%) | 362tok | 0.91s
+CoT      | pred='yntlnss' | pos_acc=4/7 (57.1%) | 387tok | 0.79s
+L2M      | pred='ynnscss' | pos_acc=6/7 (85.7%) | 545tok | 2.18s
+L2M-DV   | pred='ynnlcss' | pos_acc=6/7 (85.7%) | 811tok | 3.06s
+Baseline | pred='lssnnnnn' | pos_acc=6/7 (85.7%) | 364tok | 0.86s | len_mismatch(gold=7, pred=8)
+CoT      | pred='lssnnnn' | pos_acc=6/7 (85.7%) | 390tok | 0.92s
+L2M      | pred='lsnnotn' | pos_acc=5/7 (71.4%) | 560tok | 1.88s
+L2M-DV   | pred='lsnnnnn' | pos_acc=7/7 (100.0%) | 813tok | 3.13s
+Baseline | pred='ymsyony' | pos_acc=5/7 (71.4%) | 361tok | 0.77s
+CoT      | pred='ymsyngy' | pos_acc=4/7 (57.1%) | 387tok | 1.81s
+L2M      | pred='ymsylyn' | pos_acc=3/7 (42.9%) | 565tok | 1.94s
+L2M-DV   | pred='ymyyyny' | pos_acc=7/7 (100.0%) | 801tok | 3.13s
+Baseline | pred='yecnmyn' | pos_acc=2/7 (28.6%) | 365tok | 0.81s
+CoT      | pred='yeeeenn' | pos_acc=4/7 (57.1%) | 389tok | 1.77s
+L2M      | pred='yenmeny' | pos_acc=7/7 (100.0%) | 548tok | 2.05s
+L2M-DV   | pred='yenmeny' | pos_acc=7/7 (100.0%) | 769tok | 2.73s
+Baseline | pred='yyylyly' | pos_acc=4/7 (57.1%) | 361tok | 1.08s
+CoT      | pred='yyylyly' | pos_acc=4/7 (57.1%) | 386tok | 0.81s
+L2M      | pred='yyylyly' | pos_acc=4/7 (57.1%) | 556tok | 2.34s
+L2M-DV   | pred='yyyyney' | pos_acc=7/7 (100.0%) | 766tok | 2.36s
+
+### Batch Summary (n_words=7)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  53.57% | 7,245 | 1.024s |
+| CoT      |  55.71% | 7,759 | 1.105s |
+| L2M      |  84.29% | 11,080 | 1.905s |
+| L2M-DV   |  96.43% | 15,771 | 3.098s |
+
+======================================================================
+num_words = 8 | batch_size = 20
+Baseline | pred='lereynnl' | pos_acc=5/8 (62.5%) | 364tok | 0.84s
+CoT      | pred='lereynln' | pos_acc=3/8 (37.5%) | 389tok | 0.83s
+L2M      | pred='leynyynl' | pos_acc=7/8 (87.5%) | 552tok | 2.51s
+L2M-DV   | pred='leynycnl' | pos_acc=8/8 (100.0%) | 773tok | 2.27s
+Baseline | pred='lnnlyonn' | pos_acc=2/8 (25.0%) | 363tok | 0.84s
+CoT      | pred='lnmtylny' | pos_acc=5/8 (62.5%) | 389tok | 1.23s
+L2M      | pred='ylmynlny' | pos_acc=7/8 (87.5%) | 559tok | 2.28s
+L2M-DV   | pred='ynmynlny' | pos_acc=8/8 (100.0%) | 814tok | 3.44s
+Baseline | pred='ysslynel' | pos_acc=5/8 (62.5%) | 365tok | 0.86s
+CoT      | pred='ysslynen' | pos_acc=4/8 (50.0%) | 390tok | 0.89s
+L2M      | pred='ysyyenel' | pos_acc=8/8 (100.0%) | 553tok | 1.75s
+L2M-DV   | pred='ysyyenel' | pos_acc=8/8 (100.0%) | 814tok | 6.73s
+Baseline | pred='tytetnny' | pos_acc=5/8 (62.5%) | 367tok | 0.96s
+CoT      | pred='tyteseen' | pos_acc=3/8 (37.5%) | 391tok | 1.00s
+L2M      | pred='tytreeyn' | pos_acc=2/8 (25.0%) | 578tok | 1.33s
+L2M-DV   | pred='tyeeysny' | pos_acc=8/8 (100.0%) | 782tok | 1.90s
+Baseline | pred='nnnynonn' | pos_acc=5/8 (62.5%) | 366tok | 0.87s
+CoT      | pred='nnnynono' | pos_acc=4/8 (50.0%) | 391tok | 0.82s
+L2M      | pred='nnynnnyn' | pos_acc=7/8 (87.5%) | 554tok | 1.77s
+L2M-DV   | pred='nnyynnyn' | pos_acc=8/8 (100.0%) | 782tok | 5.18s
+Baseline | pred='ynoanvee' | pos_acc=3/8 (37.5%) | 363tok | 0.83s
+CoT      | pred='ynoeneyy' | pos_acc=6/8 (75.0%) | 389tok | 0.77s
+L2M      | pred='ynnneeyy' | pos_acc=7/8 (87.5%) | 563tok | 3.95s
+L2M-DV   | pred='ynnnneyy' | pos_acc=8/8 (100.0%) | 783tok | 3.03s
+Baseline | pred='nnntllne' | pos_acc=7/8 (87.5%) | 364tok | 0.90s
+CoT      | pred='nnlaylne' | pos_acc=5/8 (62.5%) | 389tok | 0.92s
+L2M      | pred='nonlylalnce' | pos_acc=3/8 (37.5%) | 575tok | 2.25s | len_mismatch(gold=8, pred=11)
+L2M-DV   | pred='nnnyllne' | pos_acc=8/8 (100.0%) | 838tok | 3.58s
+Baseline | pred='llllylal' | pos_acc=2/8 (25.0%) | 362tok | 1.39s
+CoT      | pred='lllnylry' | pos_acc=3/8 (37.5%) | 388tok | 1.93s
+L2M      | pred='nlnlyyly' | pos_acc=7/8 (87.5%) | 551tok | 2.06s
+L2M-DV   | pred='nlnyyyly' | pos_acc=8/8 (100.0%) | 775tok | 2.24s
+Baseline | pred='nnlymsle' | pos_acc=3/8 (37.5%) | 366tok | 1.27s
+CoT      | pred='nnlynnle' | pos_acc=2/8 (25.0%) | 391tok | 0.86s
+L2M      | pred='nnynmyel' | pos_acc=8/8 (100.0%) | 561tok | 1.86s
+L2M-DV   | pred='nnynmyel' | pos_acc=8/8 (100.0%) | 816tok | 4.37s
+Baseline | pred='yevnnnnn' | pos_acc=6/8 (75.0%) | 370tok | 1.33s
+CoT      | pred='yevnnnno' | pos_acc=5/8 (62.5%) | 395tok | 0.84s
+L2M      | pred='yennynnn' | pos_acc=8/8 (100.0%) | 561tok | 1.73s
+L2M-DV   | pred='yenynnnn' | pos_acc=6/8 (75.0%) | 848tok | 4.10s
+Baseline | pred='nngmlncl' | pos_acc=4/8 (50.0%) | 370tok | 1.10s
+CoT      | pred='nnymlycl' | pos_acc=6/8 (75.0%) | 396tok | 0.88s
+L2M      | pred='nnymynyl' | pos_acc=6/8 (75.0%) | 557tok | 2.22s
+L2M-DV   | pred='nnmmyynl' | pos_acc=7/8 (87.5%) | 785tok | 2.87s
+Baseline | pred='nnntyyyn' | pos_acc=5/8 (62.5%) | 368tok | 1.14s
+CoT      | pred='nnntynyn' | pos_acc=6/8 (75.0%) | 393tok | 0.81s
+L2M      | pred='nynsynyn' | pos_acc=8/8 (100.0%) | 608tok | 2.17s
+L2M-DV   | pred='nysynynn' | pos_acc=3/8 (37.5%) | 784tok | 3.04s
+Baseline | pred='ngnnysgy' | pos_acc=5/8 (62.5%) | 363tok | 1.29s
+CoT      | pred='ngnnysgy' | pos_acc=5/8 (62.5%) | 388tok | 7.33s
+L2M      | pred='nynmyegy' | pos_acc=8/8 (100.0%) | 555tok | 3.26s
+L2M-DV   | pred='nymyegy' | pos_acc=2/8 (25.0%) | 775tok | 3.19s | len_mismatch(gold=8, pred=7)
+Baseline | pred='esnglyss' | pos_acc=4/8 (50.0%) | 364tok | 0.93s
+CoT      | pred='esnglysl' | pos_acc=3/8 (37.5%) | 387tok | 0.78s
+L2M      | pred='eyngynls' | pos_acc=8/8 (100.0%) | 555tok | 2.12s
+L2M-DV   | pred='eyngynyls' | pos_acc=6/8 (75.0%) | 756tok | 3.31s | len_mismatch(gold=8, pred=9)
+Baseline | pred='elgyyyny' | pos_acc=7/8 (87.5%) | 363tok | 0.93s
+CoT      | pred='elgyyyny' | pos_acc=7/8 (87.5%) | 388tok | 0.90s
+L2M      | pred='exgyyyny' | pos_acc=8/8 (100.0%) | 550tok | 1.52s
+L2M-DV   | pred='exgyyyny' | pos_acc=8/8 (100.0%) | 835tok | 3.12s
+Baseline | pred='yssllnno' | pos_acc=3/8 (37.5%) | 371tok | 1.53s
+CoT      | pred='yssllnnt' | pos_acc=3/8 (37.5%) | 396tok | 0.96s
+L2M      | pred='ysclryen' | pos_acc=8/8 (100.0%) | 558tok | 1.58s
+L2M-DV   | pred='ysclryen' | pos_acc=8/8 (100.0%) | 788tok | 3.54s
+Baseline | pred='nysnnnyn' | pos_acc=6/8 (75.0%) | 366tok | 0.87s
+CoT      | pred='tynlnnnt' | pos_acc=4/8 (50.0%) | 391tok | 1.54s
+L2M      | pred='tynnnnon' | pos_acc=6/8 (75.0%) | 583tok | 2.34s
+L2M-DV   | pred='tyennnyn' | pos_acc=8/8 (100.0%) | 840tok | 3.93s
+Baseline | pred='yntlnnns' | pos_acc=4/8 (50.0%) | 374tok | 0.96s
+CoT      | pred='yntlnnns' | pos_acc=4/8 (50.0%) | 399tok | 1.39s
+L2M      | pred='ymnlennn' | pos_acc=8/8 (100.0%) | 561tok | 2.05s
+L2M-DV   | pred='ymnlennn' | pos_acc=8/8 (100.0%) | 790tok | 3.37s
+Baseline | pred='ylnneese' | pos_acc=3/8 (37.5%) | 369tok | 0.78s
+CoT      | pred='yntnllly' | pos_acc=5/8 (62.5%) | 395tok | 0.99s
+L2M      | pred='ynynleny' | pos_acc=8/8 (100.0%) | 557tok | 1.75s
+L2M-DV   | pred='ynynleny' | pos_acc=8/8 (100.0%) | 786tok | 2.48s
+Baseline | pred='eennnnon' | pos_acc=4/8 (50.0%) | 365tok | 1.03s
+CoT      | pred='eylntnon' | pos_acc=4/8 (50.0%) | 391tok | 1.02s
+L2M      | pred='eynnlnny' | pos_acc=8/8 (100.0%) | 563tok | 2.52s
+L2M-DV   | pred='eynnlnny' | pos_acc=8/8 (100.0%) | 844tok | 4.30s
+
+### Batch Summary (n_words=8)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  55.00% | 7,323 | 1.032s |
+| CoT      |  54.37% | 7,826 | 1.335s |
+| L2M      |  87.50% | 11,254 | 2.151s |
+| L2M-DV   |  90.00% | 16,008 | 3.499s |
+
+======================================================================
+num_words = 9 | batch_size = 20
+Baseline | pred='lccmnlyne' | pos_acc=5/9 (55.6%) | 371tok | 0.86s
+CoT      | pred='lxylmnlye' | pos_acc=3/9 (33.3%) | 396tok | 0.96s
+L2M      | pred='rcymeyyne' | pos_acc=7/9 (77.8%) | 562tok | 2.01s
+L2M-DV   | pred='rcymeynne' | pos_acc=6/9 (66.7%) | 796tok | 3.77s
+Baseline | pred='nyrnlmyee' | pos_acc=4/9 (44.4%) | 364tok | 0.94s
+CoT      | pred='ntynnleee' | pos_acc=4/9 (44.4%) | 389tok | 1.28s
+L2M      | pred='nynlnemye' | pos_acc=8/9 (88.9%) | 562tok | 1.94s
+L2M-DV   | pred='nynlnemye' | pos_acc=8/9 (88.9%) | 814tok | 3.36s
+Baseline | pred='elnysmnnl' | pos_acc=4/9 (44.4%) | 371tok | 0.89s
+CoT      | pred='elnnsmnly' | pos_acc=5/9 (55.6%) | 396tok | 1.05s
+L2M      | pred='ennymnnly' | pos_acc=9/9 (100.0%) | 562tok | 1.83s
+L2M-DV   | pred='ennymnly' | pos_acc=6/9 (66.7%) | 782tok | 2.73s | len_mismatch(gold=9, pred=8)
+Baseline | pred='nlynnynne' | pos_acc=4/9 (44.4%) | 370tok | 0.98s
+CoT      | pred='nlynnynne' | pos_acc=4/9 (44.4%) | 395tok | 0.95s
+L2M      | pred='nyynyneen' | pos_acc=8/9 (88.9%) | 561tok | 2.75s
+L2M-DV   | pred='nyynynnen' | pos_acc=9/9 (100.0%) | 850tok | 3.10s
+Baseline | pred='ylnynltyn' | pos_acc=2/9 (22.2%) | 366tok | 0.79s
+CoT      | pred='ylnynylnn' | pos_acc=2/9 (22.2%) | 391tok | 1.11s
+L2M      | pred='yntnonlral' | pos_acc=4/9 (44.4%) | 573tok | 1.64s | len_mismatch(gold=9, pred=10)
+L2M-DV   | pred='ynynynyln' | pos_acc=9/9 (100.0%) | 843tok | 3.93s
+Baseline | pred='ednnmsygy' | pos_acc=5/9 (55.6%) | 371tok | 0.98s
+CoT      | pred='etnnmsmgy' | pos_acc=6/9 (66.7%) | 396tok | 0.97s
+L2M      | pred='eenlmssyy' | pos_acc=8/9 (88.9%) | 562tok | 2.74s
+L2M-DV   | pred='eenlnscyy' | pos_acc=7/9 (77.8%) | 794tok | 3.23s
+Baseline | pred='lneonntn' | pos_acc=2/9 (22.2%) | 367tok | 1.36s | len_mismatch(gold=9, pred=8)
+CoT      | pred='yenerenr' | pos_acc=3/9 (33.3%) | 391tok | 0.72s | len_mismatch(gold=9, pred=8)
+L2M      | pred='yennenen' | pos_acc=8/9 (88.9%) | 558tok | 3.38s | len_mismatch(gold=9, pred=8)
+L2M-DV   | pred='yennenen' | pos_acc=8/9 (88.9%) | 845tok | 3.73s | len_mismatch(gold=9, pred=8)
+Baseline | pred='nonylnaln' | pos_acc=4/9 (44.4%) | 372tok | 0.78s
+CoT      | pred='nnntnynnn' | pos_acc=5/9 (55.6%) | 397tok | 0.97s
+L2M      | pred='nmnynyltn' | pos_acc=9/9 (100.0%) | 564tok | 2.40s
+L2M-DV   | pred='nmnynyltn' | pos_acc=9/9 (100.0%) | 797tok | 3.50s
+Baseline | pred='ylnelnooy' | pos_acc=4/9 (44.4%) | 369tok | 1.32s
+CoT      | pred='ylnelnoin' | pos_acc=3/9 (33.3%) | 394tok | 1.13s
+L2M      | pred='ylnelonnn' | pos_acc=4/9 (44.4%) | 587tok | 2.66s
+L2M-DV   | pred='ynlennnny' | pos_acc=9/9 (100.0%) | 850tok | 4.42s
+Baseline | pred='nllnnynnnn' | pos_acc=6/9 (66.7%) | 371tok | 1.10s | len_mismatch(gold=9, pred=10)
+CoT      | pred='mnlnneonn' | pos_acc=5/9 (55.6%) | 394tok | 0.84s
+L2M      | pred='mlleeyynn' | pos_acc=8/9 (88.9%) | 563tok | 3.32s
+L2M-DV   | pred='mllneyynn' | pos_acc=9/9 (100.0%) | 857tok | 3.40s
+Baseline | pred='ynelemtly' | pos_acc=5/9 (55.6%) | 373tok | 1.33s
+CoT      | pred='yneylntyy' | pos_acc=9/9 (100.0%) | 398tok | 0.70s
+L2M      | pred='yneylntyy' | pos_acc=9/9 (100.0%) | 567tok | 2.20s
+L2M-DV   | pred='ynelyntyy' | pos_acc=7/9 (77.8%) | 798tok | 3.18s
+Baseline | pred='elnnlyyyn' | pos_acc=4/9 (44.4%) | 367tok | 0.94s
+CoT      | pred='elnnlyyyn' | pos_acc=4/9 (44.4%) | 392tok | 1.02s
+L2M      | pred='ennynyyyy' | pos_acc=7/9 (77.8%) | 567tok | 2.10s
+L2M-DV   | pred='ennyyynyy' | pos_acc=9/9 (100.0%) | 825tok | 3.57s
+Baseline | pred='nmmllnlee' | pos_acc=4/9 (44.4%) | 371tok | 0.95s
+CoT      | pred='nmmllnlnl' | pos_acc=3/9 (33.3%) | 397tok | 1.08s
+L2M      | pred='nmylnenle' | pos_acc=9/9 (100.0%) | 563tok | 2.27s
+L2M-DV   | pred='nmylnenle' | pos_acc=9/9 (100.0%) | 794tok | 2.11s
+Baseline | pred='nnntnnnry' | pos_acc=5/9 (55.6%) | 367tok | 0.76s
+CoT      | pred='nnntnnnry' | pos_acc=5/9 (55.6%) | 392tok | 1.40s
+L2M      | pred='nynnnlnny' | pos_acc=9/9 (100.0%) | 563tok | 3.01s
+L2M-DV   | pred='nynnnnnny' | pos_acc=8/9 (88.9%) | 792tok | 2.26s
+Baseline | pred='nonllnysy' | pos_acc=6/9 (66.7%) | 366tok | 1.39s
+CoT      | pred='nnlnllnly' | pos_acc=5/9 (55.6%) | 392tok | 0.84s
+L2M      | pred='nnnnlnyny' | pos_acc=9/9 (100.0%) | 568tok | 1.83s
+L2M-DV   | pred='nnnnlnyny' | pos_acc=9/9 (100.0%) | 791tok | 2.06s
+Baseline | pred='yynlntgyn' | pos_acc=7/9 (77.8%) | 369tok | 0.78s
+CoT      | pred='yynllaynyz' | pos_acc=5/9 (55.6%) | 394tok | 1.02s | len_mismatch(gold=9, pred=10)
+L2M      | pred='ynlnnynyn' | pos_acc=5/9 (55.6%) | 569tok | 2.68s
+L2M-DV   | pred='yynlnyyyn' | pos_acc=9/9 (100.0%) | 793tok | 2.16s
+Baseline | pred='yelnoonyy' | pos_acc=5/9 (55.6%) | 369tok | 1.39s
+CoT      | pred='yelnoonyy' | pos_acc=5/9 (55.6%) | 394tok | 1.35s
+L2M      | pred='yelnnnyny' | pos_acc=9/9 (100.0%) | 566tok | 2.78s
+L2M-DV   | pred='yelnnnyny' | pos_acc=9/9 (100.0%) | 848tok | 3.16s
+Baseline | pred='rllnlylnc' | pos_acc=5/9 (55.6%) | 367tok | 0.97s
+CoT      | pred='rllnrynlc' | pos_acc=3/9 (33.3%) | 392tok | 0.88s
+L2M      | pred='rlnyynnnc' | pos_acc=8/9 (88.9%) | 558tok | 2.58s
+L2M-DV   | pred='rlnyynlnc' | pos_acc=9/9 (100.0%) | 825tok | 3.69s
+Baseline | pred='nonnnnnnnn' | pos_acc=4/9 (44.4%) | 368tok | 0.83s | len_mismatch(gold=9, pred=10)
+CoT      | pred='nnxnnnnnnn' | pos_acc=5/9 (55.6%) | 394tok | 0.77s | len_mismatch(gold=9, pred=10)
+L2M      | pred='nyrnsnynn' | pos_acc=7/9 (77.8%) | 564tok | 1.77s
+L2M-DV   | pred='nyrnsnynnn' | pos_acc=7/9 (77.8%) | 800tok | 2.93s | len_mismatch(gold=9, pred=10)
+Baseline | pred='neltmleas' | pos_acc=4/9 (44.4%) | 373tok | 0.89s
+CoT      | pred='neseeyesss' | pos_acc=4/9 (44.4%) | 398tok | 0.82s | len_mismatch(gold=9, pred=10)
+L2M      | pred='nemmyeeys' | pos_acc=8/9 (88.9%) | 564tok | 2.03s
+L2M-DV   | pred='nenmyeeys' | pos_acc=9/9 (100.0%) | 798tok | 3.79s
+
+### Batch Summary (n_words=9)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  49.44% | 7,382 | 1.012s |
+| CoT      |  48.89% | 7,882 | 0.993s |
+| L2M      |  85.00% | 11,303 | 2.395s |
+| L2M-DV   |  91.67% | 16,292 | 3.204s |
+
+======================================================================
+num_words = 10 | batch_size = 20
+Baseline | pred='ylnynglcee' | pos_acc=6/10 (60.0%) | 370tok | 1.43s
+CoT      | pred='yllnnglcmc' | pos_acc=4/10 (40.0%) | 396tok | 0.93s
+L2M      | pred='yllnnyllee' | pos_acc=4/10 (40.0%) | 598tok | 2.03s
+L2M-DV   | pred='ylnynnleym' | pos_acc=10/10 (100.0%) | 853tok | 3.07s
+Baseline | pred='nrnnlnyytl' | pos_acc=5/10 (50.0%) | 373tok | 1.10s
+CoT      | pred='nrnnllygcy' | pos_acc=5/10 (50.0%) | 398tok | 0.98s
+L2M      | pred='nxnlllryyy' | pos_acc=8/10 (80.0%) | 568tok | 2.44s
+L2M-DV   | pred='nxnnlyryyy' | pos_acc=10/10 (100.0%) | 835tok | 3.91s
+Baseline | pred='yynnllnnnn' | pos_acc=9/10 (90.0%) | 370tok | 1.02s
+CoT      | pred='yyyynnnnnn' | pos_acc=6/10 (60.0%) | 395tok | 0.73s
+L2M      | pred='yynnglssnn' | pos_acc=6/10 (60.0%) | 590tok | 2.65s
+L2M-DV   | pred='yynnlsnnnn' | pos_acc=10/10 (100.0%) | 835tok | 3.48s
+Baseline | pred='edlyymnsmg' | pos_acc=3/10 (30.0%) | 373tok | 0.95s
+CoT      | pred='edlyynsgyy' | pos_acc=3/10 (30.0%) | 397tok | 0.95s
+L2M      | pred='eyllyyynmy' | pos_acc=6/10 (60.0%) | 569tok | 1.65s
+L2M-DV   | pred='eyyyyyyynn' | pos_acc=6/10 (60.0%) | 804tok | 2.76s
+Baseline | pred='nnngnnnnnn' | pos_acc=5/10 (50.0%) | 372tok | 1.01s
+CoT      | pred='nelnntnsmn' | pos_acc=6/10 (60.0%) | 398tok | 1.31s
+L2M      | pred='nennnylnmn' | pos_acc=10/10 (100.0%) | 577tok | 2.09s
+L2M-DV   | pred='nennnylnmn' | pos_acc=10/10 (100.0%) | 804tok | 3.26s
+Baseline | pred='ialnylyyey' | pos_acc=6/10 (60.0%) | 366tok | 1.30s
+CoT      | pred='yntlnllyy' | pos_acc=5/10 (50.0%) | 395tok | 0.99s | len_mismatch(gold=10, pred=9)
+L2M      | pred='yntnonllyy' | pos_acc=5/10 (50.0%) | 585tok | 2.03s
+L2M-DV   | pred='ynynllyyyy' | pos_acc=9/10 (90.0%) | 798tok | 2.73s
+Baseline | pred='elyyolnnyz' | pos_acc=6/10 (60.0%) | 374tok | 0.77s
+CoT      | pred='elyylnygnn' | pos_acc=7/10 (70.0%) | 399tok | 0.92s
+L2M      | pred='elyyyeynyn' | pos_acc=9/10 (90.0%) | 573tok | 2.37s
+L2M-DV   | pred='elyyyyeenyn' | pos_acc=4/10 (40.0%) | 771tok | 2.86s | len_mismatch(gold=10, pred=11)
+Baseline | pred='mnntnnoomm' | pos_acc=4/10 (40.0%) | 375tok | 1.38s
+CoT      | pred='mnntnnooml' | pos_acc=3/10 (30.0%) | 400tok | 1.09s
+L2M      | pred='myneynnyym' | pos_acc=9/10 (90.0%) | 579tok | 1.78s
+L2M-DV   | pred='myneynymym' | pos_acc=8/10 (80.0%) | 864tok | 4.64s
+Baseline | pred='yyyneeynon' | pos_acc=6/10 (60.0%) | 373tok | 0.85s
+CoT      | pred='yyyneeynnn' | pos_acc=6/10 (60.0%) | 399tok | 1.06s
+L2M      | pred='ynneeyyysn' | pos_acc=8/10 (80.0%) | 574tok | 2.24s
+L2M-DV   | pred='yynneyyyyn' | pos_acc=9/10 (90.0%) | 864tok | 3.67s
+Baseline | pred='yntnnynney' | pos_acc=7/10 (70.0%) | 374tok | 1.19s
+CoT      | pred='ylnnnlytty' | pos_acc=3/10 (30.0%) | 399tok | 1.10s
+L2M      | pred='ynmnyyyney' | pos_acc=9/10 (90.0%) | 570tok | 1.59s
+L2M-DV   | pred='ynmnyylney' | pos_acc=10/10 (100.0%) | 808tok | 2.73s
+Baseline | pred='yelmmynity' | pos_acc=4/10 (40.0%) | 373tok | 1.00s
+CoT      | pred='yelemmynyy' | pos_acc=5/10 (50.0%) | 398tok | 1.37s
+L2M      | pred='yelemcynsy' | pos_acc=4/10 (40.0%) | 597tok | 2.57s
+L2M-DV   | pred='yeymomyyny' | pos_acc=9/10 (90.0%) | 806tok | 3.55s
+Baseline | pred='myytnglnce' | pos_acc=4/10 (40.0%) | 373tok | 0.90s
+CoT      | pred='myytnglnce' | pos_acc=4/10 (40.0%) | 398tok | 1.05s
+L2M      | pred='myyyynysye' | pos_acc=8/10 (80.0%) | 570tok | 2.97s
+L2M-DV   | pred='myyyynssye' | pos_acc=9/10 (90.0%) | 805tok | 3.31s
+Baseline | pred='lytlnrnal' | pos_acc=4/10 (40.0%) | 372tok | 0.72s | len_mismatch(gold=10, pred=9)
+CoT      | pred='lyylnrlnsl' | pos_acc=4/10 (40.0%) | 398tok | 1.27s
+L2M      | pred='lynlyrnlnl' | pos_acc=9/10 (90.0%) | 568tok | 2.10s
+L2M-DV   | pred='nynlyrnlnl' | pos_acc=10/10 (100.0%) | 800tok | 3.10s
+Baseline | pred='ynlltynnix' | pos_acc=7/10 (70.0%) | 368tok | 0.86s
+CoT      | pred='yntnlynnx' | pos_acc=6/10 (60.0%) | 394tok | 0.86s | len_mismatch(gold=10, pred=9)
+L2M      | pred='ylnltynnnx' | pos_acc=6/10 (60.0%) | 583tok | 2.05s
+L2M-DV   | pred='ynlnyynnx' | pos_acc=8/10 (80.0%) | 856tok | 5.56s | len_mismatch(gold=10, pred=9)
+Baseline | pred='nnceylnylx' | pos_acc=5/10 (50.0%) | 372tok | 0.78s
+CoT      | pred='nnceylnlrx' | pos_acc=6/10 (60.0%) | 397tok | 1.53s
+L2M      | pred='nnemyylnyx' | pos_acc=8/10 (80.0%) | 567tok | 2.33s
+L2M-DV   | pred='nnemyynlyx' | pos_acc=10/10 (100.0%) | 804tok | 2.87s
+Baseline | pred='yynelgnmly' | pos_acc=5/10 (50.0%) | 375tok | 1.01s
+CoT      | pred='yyleregyly' | pos_acc=4/10 (40.0%) | 399tok | 0.74s
+L2M      | pred='yyyelnynmy' | pos_acc=10/10 (100.0%) | 570tok | 1.85s
+L2M-DV   | pred='yyenlnyncy' | pos_acc=7/10 (70.0%) | 806tok | 2.87s
+Baseline | pred='yyyllttgys' | pos_acc=6/10 (60.0%) | 369tok | 0.86s
+CoT      | pred='yyyllttcgy' | pos_acc=7/10 (70.0%) | 394tok | 0.84s
+L2M      | pred='yyylctnnyy' | pos_acc=9/10 (90.0%) | 581tok | 1.94s
+L2M-DV   | pred='yyylctnnyy' | pos_acc=9/10 (90.0%) | 803tok | 3.67s
+Baseline | pred='ynoletymss' | pos_acc=4/10 (40.0%) | 372tok | 0.90s
+CoT      | pred='ynoletnsmr' | pos_acc=3/10 (30.0%) | 398tok | 0.84s
+L2M      | pred='ynoletynss' | pos_acc=5/10 (50.0%) | 603tok | 4.55s
+L2M-DV   | pred='ynylymnys' | pos_acc=5/10 (50.0%) | 804tok | 2.50s | len_mismatch(gold=10, pred=9)
+Baseline | pred='yyyllmnncc' | pos_acc=7/10 (70.0%) | 380tok | 1.03s
+CoT      | pred='yyyllmnncc' | pos_acc=7/10 (70.0%) | 405tok | 1.59s
+L2M      | pred='yyyllynmyc' | pos_acc=10/10 (100.0%) | 577tok | 1.93s
+L2M-DV   | pred='yyyllynmyc' | pos_acc=10/10 (100.0%) | 881tok | 3.41s
+Baseline | pred='nnllnnyen' | pos_acc=6/10 (60.0%) | 380tok | 0.82s | len_mismatch(gold=10, pred=9)
+CoT      | pred='nsseneeynn' | pos_acc=5/10 (50.0%) | 404tok | 0.91s
+L2M      | pred='nslennyeyn' | pos_acc=10/10 (100.0%) | 583tok | 2.56s
+L2M-DV   | pred='nslennyeyn' | pos_acc=10/10 (100.0%) | 849tok | 3.40s
+
+### Batch Summary (n_words=10)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  54.50% | 7,454 | 0.994s |
+| CoT      |  49.50% | 7,961 | 1.053s |
+| L2M      |  76.50% | 11,582 | 2.286s |
+| L2M-DV   |  86.50% | 16,450 | 3.368s |
+
+======================================================================
+num_words = 11 | batch_size = 20
+Baseline | pred='nlyeyntnonn' | pos_acc=6/11 (54.5%) | 378tok | 1.04s
+CoT      | pred='nlyeeoynnn' | pos_acc=5/11 (45.5%) | 403tok | 0.80s | len_mismatch(gold=11, pred=10)
+L2M      | pred='nyreynyyynn' | pos_acc=10/11 (90.9%) | 577tok | 1.57s
+L2M-DV   | pred='nyreynyyynn' | pos_acc=10/11 (90.9%) | 818tok | 3.67s
+Baseline | pred='ynoonlclry' | pos_acc=3/11 (27.3%) | 388tok | 0.89s | len_mismatch(gold=11, pred=10)
+CoT      | pred='lnnnnldeeeey' | pos_acc=5/11 (45.5%) | 413tok | 1.05s | len_mismatch(gold=11, pred=12)
+L2M      | pred='ynoonglcty' | pos_acc=2/11 (18.2%) | 624tok | 1.51s | len_mismatch(gold=11, pred=10)
+L2M-DV   | pred='ynnelneclly' | pos_acc=5/11 (45.5%) | 835tok | 3.27s
+Baseline | pred='yssnnnooyy' | pos_acc=6/11 (54.5%) | 369tok | 0.75s | len_mismatch(gold=11, pred=10)
+CoT      | pred='yssnnnooyy' | pos_acc=6/11 (54.5%) | 394tok | 1.16s | len_mismatch(gold=11, pred=10)
+L2M      | pred='ysynonnxlyy' | pos_acc=6/11 (54.5%) | 574tok | 2.07s
+L2M-DV   | pred='ysynonxlyyy' | pos_acc=9/11 (81.8%) | 836tok | 3.80s
+Baseline | pred='nnnsnnnsmnn' | pos_acc=6/11 (54.5%) | 374tok | 0.93s
+CoT      | pred='nnnsnnnsmnn' | pos_acc=6/11 (54.5%) | 399tok | 0.78s
+L2M      | pred='nynnnnymyn' | pos_acc=7/11 (63.6%) | 572tok | 2.95s | len_mismatch(gold=11, pred=10)
+L2M-DV   | pred='nynnnnynmyn' | pos_acc=11/11 (100.0%) | 871tok | 3.79s
+Baseline | pred='nnmnnntyyyl' | pos_acc=9/11 (81.8%) | 384tok | 0.79s
+CoT      | pred='nnmnnntyyyl' | pos_acc=9/11 (81.8%) | 407tok | 0.89s
+L2M      | pred='nngnnntyyly' | pos_acc=8/11 (72.7%) | 608tok | 1.91s
+L2M-DV   | pred='nnmnnnyyyyy' | pos_acc=11/11 (100.0%) | 885tok | 3.31s
+Baseline | pred='nnntelntnnn' | pos_acc=6/11 (54.5%) | 373tok | 0.89s
+CoT      | pred='nnntelntnn' | pos_acc=5/11 (45.5%) | 397tok | 1.04s | len_mismatch(gold=11, pred=10)
+L2M      | pred='nnnyeytonyn' | pos_acc=8/11 (72.7%) | 574tok | 2.48s
+L2M-DV   | pred='nnnyeytnynn' | pos_acc=11/11 (100.0%) | 867tok | 4.49s
+Baseline | pred='ylyytyeecln' | pos_acc=4/11 (36.4%) | 377tok | 1.35s
+CoT      | pred='ylyytynecsn' | pos_acc=5/11 (45.5%) | 402tok | 1.00s
+L2M      | pred='yyyylensyn' | pos_acc=9/11 (81.8%) | 576tok | 2.66s | len_mismatch(gold=11, pred=10)
+L2M-DV   | pred='yyyylennyyn' | pos_acc=10/11 (90.9%) | 818tok | 2.82s
+Baseline | pred='yyyynnnnmm' | pos_acc=7/11 (63.6%) | 375tok | 1.53s | len_mismatch(gold=11, pred=10)
+CoT      | pred='yyyynnnnmmm' | pos_acc=8/11 (72.7%) | 400tok | 0.90s
+L2M      | pred='yyyynnnnlll' | pos_acc=7/11 (63.6%) | 598tok | 1.54s
+L2M-DV   | pred='yyynnnyynym' | pos_acc=9/11 (81.8%) | 813tok | 2.63s
+Baseline | pred='syynnnnyrnn' | pos_acc=8/11 (72.7%) | 372tok | 0.83s
+CoT      | pred='syynnnnnyin' | pos_acc=8/11 (72.7%) | 397tok | 1.05s
+L2M      | pred='synnynyyynn' | pos_acc=6/11 (54.5%) | 578tok | 3.07s
+L2M-DV   | pred='synnynyyyn' | pos_acc=5/11 (45.5%) | 812tok | 3.51s | len_mismatch(gold=11, pred=10)
+Baseline | pred='yntyyneonyl' | pos_acc=4/11 (36.4%) | 377tok | 0.80s
+CoT      | pred='yntyyneonnl' | pos_acc=5/11 (45.5%) | 402tok | 1.07s
+L2M      | pred='ynnyeynnyny' | pos_acc=10/11 (90.9%) | 576tok | 2.44s
+L2M-DV   | pred='ynneyynnnny' | pos_acc=9/11 (81.8%) | 816tok | 2.99s
+Baseline | pred='eennlylnly' | pos_acc=2/11 (18.2%) | 376tok | 0.97s | len_mismatch(gold=11, pred=10)
+CoT      | pred='etynlynlntg' | pos_acc=5/11 (45.5%) | 402tok | 0.82s
+L2M      | pred='elynynennry' | pos_acc=8/11 (72.7%) | 616tok | 2.49s
+L2M-DV   | pred='elynyeensny' | pos_acc=7/11 (63.6%) | 817tok | 3.84s
+Baseline | pred='elnltayytse' | pos_acc=4/11 (36.4%) | 378tok | 1.59s
+CoT      | pred='elnltayymye' | pos_acc=5/11 (45.5%) | 401tok | 0.89s
+L2M      | pred='eyntyyymeye' | pos_acc=11/11 (100.0%) | 575tok | 2.59s
+L2M-DV   | pred='eyntyyyyeye' | pos_acc=10/11 (90.9%) | 773tok | 2.97s
+Baseline | pred='nnntyyssnns' | pos_acc=7/11 (63.6%) | 376tok | 0.89s
+CoT      | pred='nnntyyssnns' | pos_acc=7/11 (63.6%) | 401tok | 1.13s
+L2M      | pred='nlntyyrynnn' | pos_acc=9/11 (81.8%) | 600tok | 2.02s
+L2M-DV   | pred='nlnnyyysynn' | pos_acc=8/11 (72.7%) | 817tok | 2.75s
+Baseline | pred='elnnntnnoee' | pos_acc=5/11 (45.5%) | 377tok | 0.92s
+CoT      | pred='elnnntnnonl' | pos_acc=5/11 (45.5%) | 402tok | 1.05s
+L2M      | pred='eenynynnne' | pos_acc=7/11 (63.6%) | 575tok | 2.57s | len_mismatch(gold=11, pred=10)
+L2M-DV   | pred='eenynenynne' | pos_acc=9/11 (81.8%) | 797tok | 2.26s
+Baseline | pred='lnyyynynlcl' | pos_acc=8/11 (72.7%) | 376tok | 1.27s
+CoT      | pred='lnyyrrntgcl' | pos_acc=5/11 (45.5%) | 401tok | 0.89s
+L2M      | pred='lnnynnoetcl' | pos_acc=6/11 (54.5%) | 598tok | 2.44s
+L2M-DV   | pred='nnyynnynnyl' | pos_acc=10/11 (90.9%) | 819tok | 2.35s
+Baseline | pred='nnnedyyytse' | pos_acc=7/11 (63.6%) | 379tok | 1.16s
+CoT      | pred='nnnedyyynse' | pos_acc=7/11 (63.6%) | 404tok | 0.98s
+L2M      | pred='nnsyeeyyyne' | pos_acc=9/11 (81.8%) | 579tok | 1.70s
+L2M-DV   | pred='nnteeyyyyne' | pos_acc=10/11 (90.9%) | 820tok | 3.61s
+Baseline | pred='nonnglnnnon' | pos_acc=2/11 (18.2%) | 372tok | 1.52s
+CoT      | pred='nonnglnnnon' | pos_acc=2/11 (18.2%) | 397tok | 1.43s
+L2M      | pred='nlsgynltnn' | pos_acc=9/11 (81.8%) | 579tok | 1.81s | len_mismatch(gold=11, pred=10)
+L2M-DV   | pred='nlsgynltmnn' | pos_acc=11/11 (100.0%) | 876tok | 4.35s
+Baseline | pred='nentlnlntn' | pos_acc=6/11 (54.5%) | 372tok | 1.54s | len_mismatch(gold=11, pred=10)
+CoT      | pred='nnlnlnlntnn' | pos_acc=5/11 (45.5%) | 397tok | 0.78s
+L2M      | pred='nenlnnlynnn' | pos_acc=11/11 (100.0%) | 579tok | 2.03s
+L2M-DV   | pred='nenlnnlynnn' | pos_acc=11/11 (100.0%) | 814tok | 3.79s
+Baseline | pred='nnlylrnoonn' | pos_acc=5/11 (45.5%) | 375tok | 0.91s
+CoT      | pred='nnlylnoonnn' | pos_acc=5/11 (45.5%) | 401tok | 0.77s
+L2M      | pred='nnylynnynnn' | pos_acc=9/11 (81.8%) | 575tok | 2.38s
+L2M-DV   | pred='nnylynnynnn' | pos_acc=9/11 (81.8%) | 871tok | 5.32s
+Baseline | pred='onyyelntnn' | pos_acc=4/11 (36.4%) | 379tok | 1.02s | len_mismatch(gold=11, pred=10)
+CoT      | pred='noeyelnyen' | pos_acc=4/11 (36.4%) | 404tok | 1.00s | len_mismatch(gold=11, pred=10)
+L2M      | pred='nyyeemnynen' | pos_acc=11/11 (100.0%) | 614tok | 3.58s
+L2M-DV   | pred='nyyeecoynen' | pos_acc=9/11 (81.8%) | 820tok | 4.18s
+
+### Batch Summary (n_words=11)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  49.55% | 7,527 | 1.079s |
+| CoT      |  50.91% | 8,024 | 0.973s |
+| L2M      |  74.09% | 11,747 | 2.290s |
+| L2M-DV   |  83.64% | 16,595 | 3.485s |
+
+======================================================================
+num_words = 12 | batch_size = 20
+Baseline | pred='nnntnnntnnn' | pos_acc=7/12 (58.3%) | 381tok | 0.93s | len_mismatch(gold=12, pred=11)
+CoT      | pred='nnntnnntnnn' | pos_acc=7/12 (58.3%) | 406tok | 0.92s | len_mismatch(gold=12, pred=11)
+L2M      | pred='nlnnnyntynnn' | pos_acc=12/12 (100.0%) | 586tok | 2.45s
+L2M-DV   | pred='nlnnnynttynn' | pos_acc=10/12 (83.3%) | 861tok | 3.96s
+Baseline | pred='esnnveyylny' | pos_acc=4/12 (33.3%) | 377tok | 0.92s | len_mismatch(gold=12, pred=11)
+CoT      | pred='ealnssneyny' | pos_acc=1/12 (8.3%) | 403tok | 0.92s | len_mismatch(gold=12, pred=11)
+L2M      | pred='elnsenyyelny' | pos_acc=12/12 (100.0%) | 581tok | 2.45s
+L2M-DV   | pred='elnsenyyeln' | pos_acc=11/12 (91.7%) | 820tok | 4.00s | len_mismatch(gold=12, pred=11)
+Baseline | pred='ytyynlneyny' | pos_acc=4/12 (33.3%) | 388tok | 1.01s | len_mismatch(gold=12, pred=11)
+CoT      | pred='yyyynnnnnnny' | pos_acc=6/12 (50.0%) | 413tok | 1.53s
+L2M      | pred='yyyytlynmtyy' | pos_acc=5/12 (41.7%) | 639tok | 2.13s
+L2M-DV   | pred='yyeynyemnely' | pos_acc=11/12 (91.7%) | 902tok | 4.47s
+Baseline | pred='yllnynlssnnn' | pos_acc=7/12 (58.3%) | 384tok | 0.89s
+CoT      | pred='yllnnlyyynnn' | pos_acc=5/12 (41.7%) | 408tok | 0.82s
+L2M      | pred='yllnyyctssnn' | pos_acc=7/12 (58.3%) | 628tok | 2.64s
+L2M-DV   | pred='ylynyycsmnny' | pos_acc=12/12 (100.0%) | 864tok | 3.47s
+Baseline | pred='yyylnlnngne' | pos_acc=4/12 (33.3%) | 377tok | 1.06s | len_mismatch(gold=12, pred=11)
+CoT      | pred='yyylnlnngne' | pos_acc=4/12 (33.3%) | 402tok | 1.00s | len_mismatch(gold=12, pred=11)
+L2M      | pred='yyynnyngynee' | pos_acc=9/12 (75.0%) | 586tok | 3.11s
+L2M-DV   | pred='yyynyyngyyne' | pos_acc=12/12 (100.0%) | 886tok | 5.23s
+Baseline | pred='yxnnnnyyyynn' | pos_acc=9/12 (75.0%) | 379tok | 0.83s
+CoT      | pred='yxnnynyyynnn' | pos_acc=10/12 (83.3%) | 404tok | 0.95s
+L2M      | pred='yrnnysnynnnn' | pos_acc=6/12 (50.0%) | 584tok | 2.90s
+L2M-DV   | pred='yxnysnyyynnn' | pos_acc=12/12 (100.0%) | 855tok | 3.18s
+Baseline | pred='nlnyytllnsss' | pos_acc=4/12 (33.3%) | 378tok | 1.04s
+CoT      | pred='nlnltylgnsyy' | pos_acc=3/12 (25.0%) | 404tok | 1.38s
+L2M      | pred='nnrynllnesy' | pos_acc=4/12 (33.3%) | 580tok | 2.58s | len_mismatch(gold=12, pred=11)
+L2M-DV   | pred='nnrnylnenysy' | pos_acc=12/12 (100.0%) | 878tok | 6.26s
+Baseline | pred='yntyynglnnnn' | pos_acc=7/12 (58.3%) | 374tok | 1.04s
+CoT      | pred='yntyylnneon' | pos_acc=4/12 (33.3%) | 398tok | 0.90s | len_mismatch(gold=12, pred=11)
+L2M      | pred='yngynnneensn' | pos_acc=7/12 (58.3%) | 581tok | 2.12s
+L2M-DV   | pred='yngynneeennn' | pos_acc=9/12 (75.0%) | 816tok | 4.74s
+Baseline | pred='eenyynetnno' | pos_acc=2/12 (16.7%) | 384tok | 0.93s | len_mismatch(gold=12, pred=11)
+CoT      | pred='eynylnetvlen' | pos_acc=4/12 (33.3%) | 410tok | 1.39s
+L2M      | pred='eytgnttveeinn' | pos_acc=6/12 (50.0%) | 632tok | 2.61s | len_mismatch(gold=12, pred=13)
+L2M-DV   | pred='eymynyteyenn' | pos_acc=12/12 (100.0%) | 895tok | 4.80s
+Baseline | pred='yntnngyytgye' | pos_acc=8/12 (66.7%) | 385tok | 1.12s
+CoT      | pred='yntnnmlyssle' | pos_acc=8/12 (66.7%) | 407tok | 1.02s
+L2M      | pred='ynennmyysnye' | pos_acc=12/12 (100.0%) | 593tok | 1.99s
+L2M-DV   | pred='ynenmyyssnye' | pos_acc=9/12 (75.0%) | 860tok | 3.78s
+Baseline | pred='nysyrlylxtyn' | pos_acc=6/12 (50.0%) | 384tok | 0.92s
+CoT      | pred='ntyyllyltyy' | pos_acc=5/12 (41.7%) | 409tok | 0.97s | len_mismatch(gold=12, pred=11)
+L2M      | pred='nysyrlylxlty' | pos_acc=7/12 (58.3%) | 618tok | 2.14s
+L2M-DV   | pred='nyllyeyylxyn' | pos_acc=4/12 (33.3%) | 833tok | 2.99s
+Baseline | pred='onlnltyllyss' | pos_acc=2/12 (16.7%) | 384tok | 0.82s
+CoT      | pred='onlnltyllyss' | pos_acc=2/12 (16.7%) | 409tok | 0.96s
+L2M      | pred='nenynneymys' | pos_acc=10/12 (83.3%) | 593tok | 3.22s | len_mismatch(gold=12, pred=11)
+L2M-DV   | pred='nennynneymyys' | pos_acc=4/12 (33.3%) | 835tok | 4.03s | len_mismatch(gold=12, pred=13)
+Baseline | pred='lyllyyltntn' | pos_acc=5/12 (41.7%) | 381tok | 1.26s | len_mismatch(gold=12, pred=11)
+CoT      | pred='nlyltylntel' | pos_acc=3/12 (25.0%) | 406tok | 0.77s | len_mismatch(gold=12, pred=11)
+L2M      | pred='nglelyytnoel' | pos_acc=6/12 (50.0%) | 623tok | 2.66s
+L2M-DV   | pred='nyelyyyyynnel' | pos_acc=9/12 (75.0%) | 852tok | 4.72s | len_mismatch(gold=12, pred=13)
+Baseline | pred='yyylyelntnnn' | pos_acc=7/12 (58.3%) | 381tok | 0.99s
+CoT      | pred='yyrlyetnnen' | pos_acc=6/12 (50.0%) | 405tok | 0.85s | len_mismatch(gold=12, pred=11)
+L2M      | pred='yyeeyennnnn' | pos_acc=9/12 (75.0%) | 585tok | 1.82s | len_mismatch(gold=12, pred=11)
+L2M-DV   | pred='yyeyyeeynnnn' | pos_acc=11/12 (91.7%) | 868tok | 4.79s
+Baseline | pred='sytnoalymyy' | pos_acc=4/12 (33.3%) | 374tok | 0.97s | len_mismatch(gold=12, pred=11)
+CoT      | pred='syntnlnrtyy' | pos_acc=7/12 (58.3%) | 400tok | 1.03s | len_mismatch(gold=12, pred=11)
+L2M      | pred='synnyllryyy' | pos_acc=9/12 (75.0%) | 584tok | 2.59s | len_mismatch(gold=12, pred=11)
+L2M-DV   | pred='tynnyylnryyy' | pos_acc=6/12 (50.0%) | 819tok | 4.07s
+Baseline | pred='nglyytynntnn' | pos_acc=5/12 (41.7%) | 375tok | 1.47s
+CoT      | pred='ntytnnnyynnn' | pos_acc=8/12 (66.7%) | 401tok | 0.90s
+L2M      | pred='nglyyonnynnn' | pos_acc=7/12 (58.3%) | 601tok | 2.28s
+L2M-DV   | pred='nyytynrnynnn' | pos_acc=12/12 (100.0%) | 885tok | 3.70s
+Baseline | pred='nneneeyeeve' | pos_acc=5/12 (41.7%) | 378tok | 0.92s | len_mismatch(gold=12, pred=11)
+CoT      | pred='nneneayeeve' | pos_acc=5/12 (41.7%) | 403tok | 1.26s | len_mismatch(gold=12, pred=11)
+L2M      | pred='nneennereye' | pos_acc=8/12 (66.7%) | 586tok | 2.34s | len_mismatch(gold=12, pred=11)
+L2M-DV   | pred='nnennyereyee' | pos_acc=11/12 (91.7%) | 826tok | 3.09s
+Baseline | pred='elnmneynyyty' | pos_acc=7/12 (58.3%) | 381tok | 0.84s
+CoT      | pred='elmnleeyylyt' | pos_acc=7/12 (58.3%) | 406tok | 0.93s
+L2M      | pred='emnnneyyyyyy' | pos_acc=10/12 (83.3%) | 585tok | 2.85s
+L2M-DV   | pred='ennneneyyyyy' | pos_acc=8/12 (66.7%) | 832tok | 2.72s
+Baseline | pred='nnntyyllnnsn' | pos_acc=6/12 (50.0%) | 379tok | 0.99s
+CoT      | pred='nnntyyllnnsn' | pos_acc=6/12 (50.0%) | 404tok | 0.91s
+L2M      | pred='nnnyynlyennn' | pos_acc=11/12 (91.7%) | 614tok | 2.35s
+L2M-DV   | pred='nnnyynlyeynn' | pos_acc=12/12 (100.0%) | 827tok | 3.44s
+Baseline | pred='ednnlylrynnn' | pos_acc=6/12 (50.0%) | 382tok | 1.44s
+CoT      | pred='ednnlylrynnn' | pos_acc=6/12 (50.0%) | 407tok | 1.02s
+L2M      | pred='endylltynnn' | pos_acc=7/12 (58.3%) | 593tok | 2.55s | len_mismatch(gold=12, pred=11)
+L2M-DV   | pred='ennyltynnnnn' | pos_acc=12/12 (100.0%) | 891tok | 3.67s
+
+### Batch Summary (n_words=12)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  45.42% | 7,606 | 1.018s |
+| CoT      |  44.58% | 8,105 | 1.022s |
+| L2M      |  68.33% | 11,972 | 2.489s |
+| L2M-DV   |  82.92% | 17,105 | 4.055s |
+
+======================================================================
+num_words = 13 | batch_size = 20
+Baseline | pred='ynoanllgntlyy' | pos_acc=6/13 (46.2%) | 385tok | 1.12s
+CoT      | pred='ynoanllgntlyy' | pos_acc=6/13 (46.2%) | 410tok | 1.00s
+L2M      | pred='ynennyneneyny' | pos_acc=9/13 (69.2%) | 596tok | 2.33s
+L2M-DV   | pred='ynennllenyen' | pos_acc=11/13 (84.6%) | 837tok | 3.25s | len_mismatch(gold=13, pred=12)
+Baseline | pred='ynegllyltyyiy' | pos_acc=5/13 (38.5%) | 378tok | 1.41s
+CoT      | pred='yneclcltynnyy' | pos_acc=8/13 (61.5%) | 403tok | 1.12s
+L2M      | pred='ynmcclyyyynny' | pos_acc=10/13 (76.9%) | 584tok | 4.63s
+L2M-DV   | pred='ynmcclyyynnny' | pos_acc=11/13 (84.6%) | 838tok | 4.25s
+Baseline | pred='nertsyelglnal' | pos_acc=4/13 (30.8%) | 388tok | 0.93s
+CoT      | pred='nertsyelgllnl' | pos_acc=5/13 (38.5%) | 413tok | 1.00s
+L2M      | pred='neysyeeyelsnl' | pos_acc=10/13 (76.9%) | 596tok | 2.16s
+L2M-DV   | pred='neysyeyellsnl' | pos_acc=13/13 (100.0%) | 855tok | 3.05s
+Baseline | pred='ealmsnnleynn' | pos_acc=4/13 (30.8%) | 387tok | 1.44s | len_mismatch(gold=13, pred=12)
+CoT      | pred='eledmnlyenonn' | pos_acc=7/13 (53.8%) | 411tok | 1.29s
+L2M      | pred='elemmnyeneen' | pos_acc=11/13 (84.6%) | 602tok | 2.77s | len_mismatch(gold=13, pred=12)
+L2M-DV   | pred='elemmmnyeneyn' | pos_acc=6/13 (46.2%) | 870tok | 4.06s
+Baseline | pred='ngnnltetnlyn' | pos_acc=6/13 (46.2%) | 382tok | 1.40s | len_mismatch(gold=13, pred=12)
+CoT      | pred='nnntlltyeeynn' | pos_acc=7/13 (53.8%) | 407tok | 1.44s
+L2M      | pred='nnntlltyeylne' | pos_acc=6/13 (46.2%) | 628tok | 2.52s
+L2M-DV   | pred='nnnnlyeeyelyn' | pos_acc=9/13 (69.2%) | 839tok | 2.76s
+Baseline | pred='ylytylnssnntnce' | pos_acc=3/13 (23.1%) | 386tok | 2.16s | len_mismatch(gold=13, pred=15)
+CoT      | pred='ylytylnssyeyn' | pos_acc=2/13 (15.4%) | 410tok | 0.97s
+L2M      | pred='yyeylllsyyne' | pos_acc=7/13 (53.8%) | 596tok | 2.17s | len_mismatch(gold=13, pred=12)
+L2M-DV   | pred='yyeyllstyyyyyn' | pos_acc=9/13 (69.2%) | 788tok | 3.31s | len_mismatch(gold=13, pred=14)
+Baseline | pred='eylnssnnlneey' | pos_acc=5/13 (38.5%) | 381tok | 0.88s
+CoT      | pred='eylnssnnlneey' | pos_acc=5/13 (38.5%) | 406tok | 1.20s
+L2M      | pred='yelettsnngllty' | pos_acc=2/13 (15.4%) | 615tok | 3.02s | len_mismatch(gold=13, pred=14)
+L2M-DV   | pred='yensnnnclnney' | pos_acc=13/13 (100.0%) | 838tok | 3.36s
+Baseline | pred='cndynonvlylnl' | pos_acc=6/13 (46.2%) | 385tok | 1.14s
+CoT      | pred='cndynogeyltnl' | pos_acc=6/13 (46.2%) | 410tok | 1.25s
+L2M      | pred='cnyndyggnlynl' | pos_acc=8/13 (61.5%) | 628tok | 1.84s
+L2M-DV   | pred='cnynnyyenynnl' | pos_acc=13/13 (100.0%) | 866tok | 5.01s
+Baseline | pred='yeeeetnnnmmn' | pos_acc=5/13 (38.5%) | 391tok | 1.09s | len_mismatch(gold=13, pred=12)
+CoT      | pred='yveelntnlnnmn' | pos_acc=5/13 (38.5%) | 417tok | 0.85s
+L2M      | pred='yyeeemnlyysmn' | pos_acc=12/13 (92.3%) | 608tok | 2.54s
+L2M-DV   | pred='yyeeemnllysmmn' | pos_acc=11/13 (84.6%) | 880tok | 3.91s | len_mismatch(gold=13, pred=14)
+Baseline | pred='nnnereltntyl' | pos_acc=4/13 (30.8%) | 385tok | 0.91s | len_mismatch(gold=13, pred=12)
+CoT      | pred='nnnereltntyy' | pos_acc=4/13 (30.8%) | 410tok | 1.39s | len_mismatch(gold=13, pred=12)
+L2M      | pred='nnyeyermcnley' | pos_acc=13/13 (100.0%) | 599tok | 3.26s
+L2M-DV   | pred='nnyeyyermcnly' | pos_acc=6/13 (46.2%) | 865tok | 5.80s
+Baseline | pred='nnlnnnnntnntt' | pos_acc=7/13 (53.8%) | 378tok | 1.63s
+CoT      | pred='nnlnnnnntntyy' | pos_acc=6/13 (46.2%) | 402tok | 1.19s
+L2M      | pred='nlntngynntty' | pos_acc=7/13 (53.8%) | 612tok | 2.87s | len_mismatch(gold=13, pred=12)
+L2M-DV   | pred='nlnlnnynnnty' | pos_acc=10/13 (76.9%) | 889tok | 4.28s | len_mismatch(gold=13, pred=12)
+Baseline | pred='yyltynlyllyyly' | pos_acc=4/13 (30.8%) | 389tok | 1.36s | len_mismatch(gold=13, pred=14)
+CoT      | pred='yyltynlyllyyly' | pos_acc=4/13 (30.8%) | 414tok | 0.69s | len_mismatch(gold=13, pred=14)
+L2M      | pred='yyllynnyeeyyy' | pos_acc=5/13 (38.5%) | 639tok | 2.10s
+L2M-DV   | pred='yylynyyeiynyy' | pos_acc=12/13 (92.3%) | 844tok | 3.34s
+Baseline | pred='lclntyyeyynl' | pos_acc=3/13 (23.1%) | 383tok | 0.98s | len_mismatch(gold=13, pred=12)
+CoT      | pred='nllntyyynlonnl' | pos_acc=6/13 (46.2%) | 409tok | 1.04s | len_mismatch(gold=13, pred=14)
+L2M      | pred='nlynyeynnyyl' | pos_acc=11/13 (84.6%) | 599tok | 1.68s | len_mismatch(gold=13, pred=12)
+L2M-DV   | pred='nlynyeynnynl' | pos_acc=10/13 (76.9%) | 841tok | 3.20s | len_mismatch(gold=13, pred=12)
+Baseline | pred='elnngmldnlyy' | pos_acc=6/13 (46.2%) | 384tok | 0.83s | len_mismatch(gold=13, pred=12)
+CoT      | pred='elnngmldnlyy' | pos_acc=6/13 (46.2%) | 409tok | 1.39s | len_mismatch(gold=13, pred=12)
+L2M      | pred='enlnycllnyyny' | pos_acc=11/13 (84.6%) | 591tok | 2.33s
+L2M-DV   | pred='enlnymlnnyyny' | pos_acc=13/13 (100.0%) | 866tok | 6.02s
+Baseline | pred='yelelnyngnnsn' | pos_acc=6/13 (46.2%) | 381tok | 0.88s
+CoT      | pred='yelelnyngnno' | pos_acc=5/13 (38.5%) | 405tok | 0.91s | len_mismatch(gold=13, pred=12)
+L2M      | pred='yelneyyyynmnn' | pos_acc=11/13 (84.6%) | 589tok | 3.14s
+L2M-DV   | pred='yellneyyyymnn' | pos_acc=7/13 (53.8%) | 834tok | 3.23s
+Baseline | pred='yrryggelntse' | pos_acc=6/13 (46.2%) | 382tok | 0.87s | len_mismatch(gold=13, pred=12)
+CoT      | pred='yrrygynesetee' | pos_acc=7/13 (53.8%) | 407tok | 0.82s
+L2M      | pred='yrnyggeeyonee' | pos_acc=10/13 (76.9%) | 598tok | 2.60s
+L2M-DV   | pred='yrnygyeenynee' | pos_acc=10/13 (76.9%) | 859tok | 4.10s
+Baseline | pred='cnyytlynoonnr' | pos_acc=7/13 (53.8%) | 383tok | 1.15s
+CoT      | pred='cnylyyynnnnrrr' | pos_acc=10/13 (76.9%) | 410tok | 1.72s | len_mismatch(gold=13, pred=14)
+L2M      | pred='cnllyyyynnnrr' | pos_acc=10/13 (76.9%) | 615tok | 3.25s
+L2M-DV   | pred='clyyyyyynnnnr' | pos_acc=9/13 (69.2%) | 834tok | 4.11s
+Baseline | pred='noytneerlnal' | pos_acc=3/13 (23.1%) | 384tok | 0.90s | len_mismatch(gold=13, pred=12)
+CoT      | pred='onyylnnnoalll' | pos_acc=5/13 (38.5%) | 410tok | 0.97s
+L2M      | pred='nyynenneyllll' | pos_acc=12/13 (92.3%) | 644tok | 3.18s
+L2M-DV   | pred='nyynenneylnll' | pos_acc=13/13 (100.0%) | 901tok | 4.23s
+Baseline | pred='ynoznlnymnnoz' | pos_acc=6/13 (46.2%) | 385tok | 1.01s
+CoT      | pred='ynozntnynlnoz' | pos_acc=5/13 (38.5%) | 411tok | 0.99s
+L2M      | pred='ynnsnlnyyyynn' | pos_acc=13/13 (100.0%) | 596tok | 2.32s
+L2M-DV   | pred='ynnslnyyyynn' | pos_acc=8/13 (61.5%) | 840tok | 1.98s | len_mismatch(gold=13, pred=12)
+Baseline | pred='stnmynnnlntly' | pos_acc=6/13 (46.2%) | 381tok | 1.13s
+CoT      | pred='stmlgyntnlym' | pos_acc=4/13 (30.8%) | 406tok | 1.11s | len_mismatch(gold=13, pred=12)
+L2M      | pred='snmyynnsslmy' | pos_acc=8/13 (61.5%) | 592tok | 1.92s | len_mismatch(gold=13, pred=12)
+L2M-DV   | pred='snmyynnsynlmy' | pos_acc=13/13 (100.0%) | 897tok | 4.19s
+
+### Batch Summary (n_words=13)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  39.23% | 7,678 | 1.161s |
+| CoT      |  43.46% | 8,180 | 1.118s |
+| L2M      |  71.54% | 12,127 | 2.632s |
+| L2M-DV   |  79.62% | 17,081 | 3.871s |
+
+======================================================================
+num_words = 14 | batch_size = 20
+Baseline | pred='nnynnnnnnnnnnn' | pos_acc=6/14 (42.9%) | 387tok | 1.55s
+CoT      | pred='nnynnnnnnnnnnn' | pos_acc=6/14 (42.9%) | 412tok | 1.11s
+L2M      | pred='nynyynntnnyye' | pos_acc=12/14 (85.7%) | 618tok | 3.44s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='nynynnntnnyyec' | pos_acc=14/14 (100.0%) | 915tok | 4.18s
+Baseline | pred='yntylntnsglgcl' | pos_acc=5/14 (35.7%) | 383tok | 1.44s
+CoT      | pred='yntlynyglnlcll' | pos_acc=6/14 (42.9%) | 409tok | 1.24s
+L2M      | pred='yntylntssgmlc' | pos_acc=6/14 (42.9%) | 627tok | 1.83s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='ynsyynnsynmngl' | pos_acc=14/14 (100.0%) | 868tok | 6.11s
+Baseline | pred='elyecnlnlylyey' | pos_acc=11/14 (78.6%) | 468tok | 3.02s
+CoT      | pred='ealelntyllyey' | pos_acc=5/14 (35.7%) | 407tok | 1.40s | len_mismatch(gold=14, pred=13)
+L2M      | pred='elyecnlnylyey' | pos_acc=11/14 (78.6%) | 595tok | 4.19s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='elyecnlnylyey' | pos_acc=11/14 (78.6%) | 847tok | 3.94s | len_mismatch(gold=14, pred=13)
+Baseline | pred='nleeeeylnyynyy' | pos_acc=8/14 (57.1%) | 390tok | 1.02s
+CoT      | pred='nleeeeylnyynyy' | pos_acc=8/14 (57.1%) | 415tok | 0.92s
+L2M      | pred='nleeeetnnlyyy' | pos_acc=7/14 (50.0%) | 647tok | 1.83s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='neeeeynmnnyeyy' | pos_acc=11/14 (78.6%) | 852tok | 4.98s
+Baseline | pred='ylyyssyggnnyy' | pos_acc=6/14 (42.9%) | 387tok | 1.97s | len_mismatch(gold=14, pred=13)
+CoT      | pred='ylyyssyyxnnnny' | pos_acc=8/14 (57.1%) | 412tok | 1.08s
+L2M      | pred='ylyytyyggnxynn' | pos_acc=6/14 (42.9%) | 626tok | 2.36s
+L2M-DV   | pred='yylysyxyynynyn' | pos_acc=12/14 (85.7%) | 915tok | 4.95s
+Baseline | pred='nnntelalnssnnn' | pos_acc=9/14 (64.3%) | 386tok | 1.06s
+CoT      | pred='nnntneleynssnn' | pos_acc=8/14 (57.1%) | 410tok | 1.02s
+L2M      | pred='nnntetllnysnon' | pos_acc=10/14 (71.4%) | 638tok | 2.01s
+L2M-DV   | pred='nnnneeelynssnn' | pos_acc=9/14 (64.3%) | 874tok | 4.43s
+Baseline | pred='nnlelneltylnsn' | pos_acc=7/14 (50.0%) | 384tok | 0.94s
+CoT      | pred='nnlelnyeylntn' | pos_acc=4/14 (28.6%) | 410tok | 1.13s | len_mismatch(gold=14, pred=13)
+L2M      | pred='nnleneylyyesn' | pos_acc=9/14 (64.3%) | 600tok | 1.78s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='nnelenyylyensn' | pos_acc=10/14 (71.4%) | 852tok | 2.91s
+Baseline | pred='nlnyglynnymnnyv' | pos_acc=2/14 (14.3%) | 385tok | 1.23s | len_mismatch(gold=14, pred=15)
+CoT      | pred='nlygnynltynnyg' | pos_acc=6/14 (42.9%) | 410tok | 1.72s
+L2M      | pred='nnygyynnnyynyn' | pos_acc=11/14 (78.6%) | 603tok | 4.93s
+L2M-DV   | pred='nnygyynnmnynn' | pos_acc=11/14 (78.6%) | 845tok | 5.13s | len_mismatch(gold=14, pred=13)
+Baseline | pred='nonynnnnllnmmm' | pos_acc=7/14 (50.0%) | 387tok | 0.97s
+CoT      | pred='nnveynnnnllnmm' | pos_acc=7/14 (50.0%) | 413tok | 0.95s
+L2M      | pred='nnennnnnynllnm' | pos_acc=13/14 (92.9%) | 606tok | 1.94s
+L2M-DV   | pred='nneynnnnynllnm' | pos_acc=14/14 (100.0%) | 878tok | 3.88s
+Baseline | pred='ylllyyynnnnnn' | pos_acc=7/14 (50.0%) | 387tok | 1.02s | len_mismatch(gold=14, pred=13)
+CoT      | pred='ylllyyynyyynn' | pos_acc=9/14 (64.3%) | 412tok | 0.83s | len_mismatch(gold=14, pred=13)
+L2M      | pred='ylnyyyyyymyenn' | pos_acc=10/14 (71.4%) | 604tok | 2.14s
+L2M-DV   | pred='ylnyyyymtyennn' | pos_acc=13/14 (92.9%) | 851tok | 4.15s
+Baseline | pred='nonlyyynnnnnnn' | pos_acc=10/14 (71.4%) | 379tok | 0.76s
+CoT      | pred='nonlyyylntnnnn' | pos_acc=8/14 (57.1%) | 404tok | 1.01s
+L2M      | pred='nnnneyyyyynnn' | pos_acc=6/14 (42.9%) | 591tok | 2.63s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='nnyeyyyynnnyn' | pos_acc=12/14 (85.7%) | 838tok | 3.08s | len_mismatch(gold=14, pred=13)
+Baseline | pred='ylyetnngnlynnn' | pos_acc=6/14 (42.9%) | 390tok | 1.41s
+CoT      | pred='ylyetndnlynnn' | pos_acc=5/14 (35.7%) | 414tok | 0.94s | len_mismatch(gold=14, pred=13)
+L2M      | pred='yylesnsyyeyyen' | pos_acc=11/14 (78.6%) | 600tok | 2.05s
+L2M-DV   | pred='yylesnsyeyyyn' | pos_acc=11/14 (78.6%) | 856tok | 2.93s | len_mismatch(gold=14, pred=13)
+Baseline | pred='nyrnnntnntyyve' | pos_acc=6/14 (42.9%) | 395tok | 0.78s
+CoT      | pred='nyrnlnnmmnnyee' | pos_acc=8/14 (57.1%) | 421tok | 0.95s
+L2M      | pred='nyveelednynyyv' | pos_acc=4/14 (28.6%) | 650tok | 2.77s
+L2M-DV   | pred='nyenltnmnnyne' | pos_acc=12/14 (85.7%) | 865tok | 3.08s | len_mismatch(gold=14, pred=13)
+Baseline | pred='nnynnnnnnnyyyy' | pos_acc=6/14 (42.9%) | 380tok | 1.00s
+CoT      | pred='nnynnnnnnnyyyy' | pos_acc=6/14 (42.9%) | 405tok | 0.96s
+L2M      | pred='nnynneeyyynry' | pos_acc=10/14 (71.4%) | 591tok | 2.84s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='nnynnyeemyyyry' | pos_acc=9/14 (64.3%) | 854tok | 3.49s
+Baseline | pred='enynlnelntnonn' | pos_acc=7/14 (50.0%) | 384tok | 1.64s
+CoT      | pred='enynlnelntnnoz' | pos_acc=6/14 (42.9%) | 410tok | 0.97s
+L2M      | pred='eyyngnmntnnry' | pos_acc=8/14 (57.1%) | 634tok | 3.17s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='eyynnmennnnyyn' | pos_acc=14/14 (100.0%) | 870tok | 3.56s
+Baseline | pred='yednynesltygy' | pos_acc=6/14 (42.9%) | 379tok | 1.02s | len_mismatch(gold=14, pred=13)
+CoT      | pred='yednynelgtyyey' | pos_acc=6/14 (42.9%) | 405tok | 1.12s
+L2M      | pred='yeyneeenylcccy' | pos_acc=7/14 (50.0%) | 596tok | 2.94s
+L2M-DV   | pred='yeeneeenylcyyy' | pos_acc=8/14 (57.1%) | 843tok | 6.48s
+Baseline | pred='lnnssyylntnlym' | pos_acc=7/14 (50.0%) | 384tok | 1.02s
+CoT      | pred='lnnssyynlntmms' | pos_acc=7/14 (50.0%) | 409tok | 1.64s
+L2M      | pred='lnnssyylltyym' | pos_acc=5/14 (35.7%) | 633tok | 1.91s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='lnnsyllyyynlmm' | pos_acc=8/14 (57.1%) | 847tok | 4.54s
+Baseline | pred='nymtnlgnnneny' | pos_acc=6/14 (42.9%) | 382tok | 1.33s | len_mismatch(gold=14, pred=13)
+CoT      | pred='nymntnmlnnooy' | pos_acc=3/14 (21.4%) | 407tok | 0.91s | len_mismatch(gold=14, pred=13)
+L2M      | pred='nyyntnnxmylry' | pos_acc=3/14 (21.4%) | 594tok | 3.90s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='nyytnxmnylrnny' | pos_acc=14/14 (100.0%) | 865tok | 4.23s
+Baseline | pred='ylyytleltlvey' | pos_acc=5/14 (35.7%) | 387tok | 0.93s | len_mismatch(gold=14, pred=13)
+CoT      | pred='ylyynglyllyeyy' | pos_acc=8/14 (57.1%) | 413tok | 1.64s
+L2M      | pred='yyyyneellyyey' | pos_acc=9/14 (64.3%) | 602tok | 1.77s | len_mismatch(gold=14, pred=13)
+L2M-DV   | pred='yyyyneyyllyyyy' | pos_acc=12/14 (85.7%) | 874tok | 4.52s
+Baseline | pred='nlltynlntnonn' | pos_acc=6/14 (42.9%) | 382tok | 1.84s | len_mismatch(gold=14, pred=13)
+CoT      | pred='nnllnlnltynonn' | pos_acc=6/14 (42.9%) | 408tok | 1.20s
+L2M      | pred='nlltynnlyyltno' | pos_acc=7/14 (50.0%) | 621tok | 3.19s
+L2M-DV   | pred='nllynnlyyyslnn' | pos_acc=14/14 (100.0%) | 909tok | 7.06s
+
+### Batch Summary (n_words=14)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  47.50% | 7,786 | 1.298s |
+| CoT      |  46.43% | 8,206 | 1.137s |
+| L2M      |  58.93% | 12,276 | 2.681s |
+| L2M-DV   |  83.21% | 17,318 | 4.382s |
+
+======================================================================
+num_words = 15 | batch_size = 20
+Baseline | pred='llltyeygynynyey' | pos_acc=6/15 (40.0%) | 390tok | 1.01s
+CoT      | pred='llltyeygynynyey' | pos_acc=6/15 (40.0%) | 415tok | 1.40s
+L2M      | pred='llmtyenyyymyyye' | pos_acc=13/15 (86.7%) | 606tok | 3.15s
+L2M-DV   | pred='llmtyenymynyye' | pos_acc=13/15 (86.7%) | 916tok | 4.99s | len_mismatch(gold=15, pred=14)
+Baseline | pred='nllnnnynynynnnn' | pos_acc=11/15 (73.3%) | 384tok | 1.34s
+CoT      | pred='nnynynltynynsns' | pos_acc=9/15 (60.0%) | 408tok | 1.32s
+L2M      | pred='nlynynnyyynynsn' | pos_acc=11/15 (73.3%) | 604tok | 2.44s
+L2M-DV   | pred='nlynynyyynyynsn' | pos_acc=14/15 (93.3%) | 866tok | 5.33s
+Baseline | pred='nlyltyllylblel' | pos_acc=5/15 (33.3%) | 394tok | 1.06s | len_mismatch(gold=15, pred=14)
+CoT      | pred='nnnlltylsslelel' | pos_acc=5/15 (33.3%) | 418tok | 1.18s
+L2M      | pred='nnnlyygglyeelee' | pos_acc=3/15 (20.0%) | 657tok | 3.14s
+L2M-DV   | pred='nnyycyyeltteeyl' | pos_acc=9/15 (60.0%) | 865tok | 5.46s
+Baseline | pred='elnnssytnltyity' | pos_acc=5/15 (33.3%) | 386tok | 1.30s
+CoT      | pred='elnnssytnltyyey' | pos_acc=4/15 (26.7%) | 412tok | 1.91s
+L2M      | pred='eylssynmmelxny' | pos_acc=3/15 (20.0%) | 607tok | 3.43s | len_mismatch(gold=15, pred=14)
+L2M-DV   | pred='eynsynmmelxnllt' | pos_acc=12/15 (80.0%) | 876tok | 5.12s
+Baseline | pred='yntlynnymnnyyylg' | pos_acc=8/15 (53.3%) | 389tok | 1.83s | len_mismatch(gold=15, pred=16)
+CoT      | pred='yntlynnnlyyynnl' | pos_acc=5/15 (33.3%) | 413tok | 0.94s
+L2M      | pred='ynoayngmnnyyyl' | pos_acc=5/15 (33.3%) | 645tok | 3.45s | len_mismatch(gold=15, pred=14)
+L2M-DV   | pred='ynrynymmynnyyll' | pos_acc=13/15 (86.7%) | 858tok | 4.51s
+Baseline | pred='lyyonnnnnssyyt' | pos_acc=6/15 (40.0%) | 394tok | 1.74s | len_mismatch(gold=15, pred=14)
+CoT      | pred='lyyonnnnnssyyt' | pos_acc=6/15 (40.0%) | 419tok | 1.55s | len_mismatch(gold=15, pred=14)
+L2M      | pred='lyyntnnynyyssyy' | pos_acc=11/15 (73.3%) | 642tok | 3.66s
+L2M-DV   | pred='lymnnnnyyyyseey' | pos_acc=13/15 (86.7%) | 891tok | 6.88s
+Baseline | pred='nnynrgylyyynyny' | pos_acc=7/15 (46.7%) | 387tok | 1.02s
+CoT      | pred='nnynyrgylyyynry' | pos_acc=8/15 (53.3%) | 411tok | 1.01s
+L2M      | pred='nnyynnoynyyyyyy' | pos_acc=11/15 (73.3%) | 607tok | 4.01s
+L2M-DV   | pred='nnyynnynnyyynny' | pos_acc=13/15 (86.7%) | 909tok | 5.33s
+Baseline | pred='nssyyllnntnlnss' | pos_acc=7/15 (46.7%) | 392tok | 1.28s
+CoT      | pred='nnnysslnnntnss' | pos_acc=7/15 (46.7%) | 416tok | 1.82s | len_mismatch(gold=15, pred=14)
+L2M      | pred='nsnyyslyyonyyys' | pos_acc=11/15 (73.3%) | 612tok | 4.41s
+L2M-DV   | pred='nsnyyslyennyys' | pos_acc=12/15 (80.0%) | 873tok | 5.44s | len_mismatch(gold=15, pred=14)
+Baseline | pred='llynsnleeynnll' | pos_acc=7/15 (46.7%) | 382tok | 1.53s | len_mismatch(gold=15, pred=14)
+CoT      | pred='ngsgnlyetdntnll' | pos_acc=5/15 (33.3%) | 411tok | 1.03s
+L2M      | pred='ngsgnmynetnlnlyl' | pos_acc=4/15 (26.7%) | 635tok | 2.46s | len_mismatch(gold=15, pred=16)
+L2M-DV   | pred='nygssmyeynnlyl' | pos_acc=7/15 (46.7%) | 761tok | 3.55s | len_mismatch(gold=15, pred=14)
+Baseline | pred='edmmynngnnltyn' | pos_acc=5/15 (33.3%) | 394tok | 1.18s | len_mismatch(gold=15, pred=14)
+CoT      | pred='edmmynoyntnlynn' | pos_acc=7/15 (46.7%) | 419tok | 1.05s
+L2M      | pred='emnyynyyynlyyn' | pos_acc=6/15 (40.0%) | 614tok | 2.46s | len_mismatch(gold=15, pred=14)
+L2M-DV   | pred='emmnynynnnlyyn' | pos_acc=6/15 (40.0%) | 890tok | 6.11s | len_mismatch(gold=15, pred=14)
+Baseline | pred='sygyonryemynity' | pos_acc=6/15 (40.0%) | 390tok | 1.62s
+CoT      | pred='sygyntynrntnyny' | pos_acc=5/15 (33.3%) | 417tok | 1.14s
+L2M      | pred='seyyynyyeemnycy' | pos_acc=8/15 (53.3%) | 611tok | 3.15s
+L2M-DV   | pred='seyynyreemnyycy' | pos_acc=15/15 (100.0%) | 928tok | 5.96s
+Baseline | pred='elnlntyltygynxg' | pos_acc=3/15 (20.0%) | 396tok | 1.35s
+CoT      | pred='elnlntyltygyxgx' | pos_acc=4/15 (26.7%) | 421tok | 1.02s
+L2M      | pred='eelnyllyyyenyyx' | pos_acc=14/15 (93.3%) | 612tok | 3.61s
+L2M-DV   | pred='eelnylyyyenyyx' | pos_acc=10/15 (66.7%) | 891tok | 4.72s | len_mismatch(gold=15, pred=14)
+Baseline | pred='nysyyelnygynynn' | pos_acc=7/15 (46.7%) | 386tok | 1.11s
+CoT      | pred='nymytlntnnnynnn' | pos_acc=8/15 (53.3%) | 411tok | 1.84s
+L2M      | pred='nyeeyeyyyynyyyn' | pos_acc=8/15 (53.3%) | 600tok | 2.90s
+L2M-DV   | pred='nyeyeyyyynyyynn' | pos_acc=14/15 (93.3%) | 860tok | 5.43s
+Baseline | pred='yntlllylnlntnnn' | pos_acc=7/15 (46.7%) | 395tok | 1.09s
+CoT      | pred='yntlllylnlntnnn' | pos_acc=7/15 (46.7%) | 420tok | 1.50s
+L2M      | pred='yntlllynltymnnn' | pos_acc=9/15 (60.0%) | 647tok | 2.49s
+L2M-DV   | pred='ynylnynllyylnnn' | pos_acc=14/15 (93.3%) | 867tok | 3.69s
+Baseline | pred='yynyyntnnnssyyr' | pos_acc=8/15 (53.3%) | 394tok | 1.17s
+CoT      | pred='yynntnnnveesnry' | pos_acc=6/15 (40.0%) | 419tok | 0.94s
+L2M      | pred='yynytnoendnssy' | pos_acc=5/15 (33.3%) | 650tok | 3.11s | len_mismatch(gold=15, pred=14)
+L2M-DV   | pred='yytynnnnensnymyy' | pos_acc=13/15 (86.7%) | 933tok | 6.10s | len_mismatch(gold=15, pred=16)
+Baseline | pred='yelelnnlyyltlce' | pos_acc=6/15 (40.0%) | 396tok | 1.40s
+CoT      | pred='yelelnnlltylnee' | pos_acc=4/15 (26.7%) | 420tok | 1.40s
+L2M      | pred='yenlnneeynnyyee' | pos_acc=9/15 (60.0%) | 614tok | 3.50s
+L2M-DV   | pred='yenlnleenyyyln' | pos_acc=12/15 (80.0%) | 884tok | 5.19s | len_mismatch(gold=15, pred=14)
+Baseline | pred='nlnnnlnnmnlnnln' | pos_acc=7/15 (46.7%) | 389tok | 1.35s
+CoT      | pred='nnnnnlnnlnnnnnn' | pos_acc=6/15 (40.0%) | 414tok | 1.28s
+L2M      | pred='nnoenlnyymlln' | pos_acc=5/15 (33.3%) | 648tok | 3.81s | len_mismatch(gold=15, pred=13)
+L2M-DV   | pred='nnlnleymmllnny' | pos_acc=11/15 (73.3%) | 885tok | 5.13s | len_mismatch(gold=15, pred=14)
+Baseline | pred='yntyyynnnlnnonn' | pos_acc=10/15 (66.7%) | 381tok | 1.18s
+CoT      | pred='yntyyynnnlnnny' | pos_acc=11/15 (73.3%) | 406tok | 2.90s | len_mismatch(gold=15, pred=14)
+L2M      | pred='ynoiyynnnllnenn' | pos_acc=10/15 (66.7%) | 626tok | 3.50s
+L2M-DV   | pred='yneyyynnnllleny' | pos_acc=11/15 (73.3%) | 862tok | 6.37s
+Baseline | pred='elenntnlnnntnss' | pos_acc=6/15 (40.0%) | 386tok | 1.21s
+CoT      | pred='elenlnylnlntsss' | pos_acc=7/15 (46.7%) | 410tok | 1.51s
+L2M      | pred='elaleayeeeynsn' | pos_acc=4/15 (26.7%) | 639tok | 2.40s | len_mismatch(gold=15, pred=14)
+L2M-DV   | pred='elenlyyeelyenss' | pos_acc=11/15 (73.3%) | 868tok | 10.89s
+Baseline | pred='cnennnnlynnnnnn' | pos_acc=10/15 (66.7%) | 387tok | 1.19s
+CoT      | pred='cnenntnlynnnnn' | pos_acc=9/15 (60.0%) | 412tok | 1.27s | len_mismatch(gold=15, pred=14)
+L2M      | pred='cnenntlymsnynn' | pos_acc=8/15 (53.3%) | 628tok | 2.46s | len_mismatch(gold=15, pred=14)
+L2M-DV   | pred='cnennlyyymnnynn' | pos_acc=15/15 (100.0%) | 877tok | 10.25s
+
+### Batch Summary (n_words=15)
+| Strategy | Accuracy | Tokens | Avg Time |
+|----------|----------|--------|----------|
+| Baseline |  45.67% | 7,792 | 1.298s |
+| CoT      |  43.00% | 8,292 | 1.400s |
+| L2M      |  52.67% | 12,504 | 3.177s |
+| L2M-DV   |  79.33% | 17,560 | 5.821s |
+
+### Average position-wise accuracy
+| Strategy | Macro / Micro | Exact Match |
+|----------|---------------|-------------|
+| Baseline | 56.29% / 50.42% | EM: 11.67% |
+| CoT      | 55.70% / 49.83% | EM: 10.33% |
+| L2M      | 82.16% / 74.71% | EM: 47.67% |
+| L2M-DV   | 90.67% / 86.96% | EM: 63.67% |
+
+### Token Usage & Time
+| Strategy | Token Usage (Total) | Average Time (sec) |
+|----------|---------------------|-------------------|
+| Baseline | 109,974 tokens | 1.059s |
+| CoT      | 117,400 tokens | 1.057s |
+| L2M      | 168,758 tokens | 2.165s |
+| L2M-DV   | 240,626 tokens | 3.497s |
+
+### Position-wise Accuracy by Number of Words (%)
+| n_words | Baseline | CoT | L2M | L2M-DV |
+| ------- | ------ | ------ | ------ | ------ |
+|       1 | 100.00 | 100.00 | 100.00 | 100.00 |
+|       2 |  67.50 |  67.50 | 100.00 |  95.00 |
+|       3 |  60.00 |  60.00 |  98.33 | 100.00 |
+|       4 |  61.25 |  60.00 |  95.00 |  98.75 |
+|       5 |  59.00 |  57.00 |  91.00 |  98.00 |
+|       6 |  56.67 |  54.17 |  89.17 |  95.00 |
+|       7 |  53.57 |  55.71 |  84.29 |  96.43 |
+|       8 |  55.00 |  54.37 |  87.50 |  90.00 |
+|       9 |  49.44 |  48.89 |  85.00 |  91.67 |
+|      10 |  54.50 |  49.50 |  76.50 |  86.50 |
+|      11 |  49.55 |  50.91 |  74.09 |  83.64 |
+|      12 |  45.42 |  44.58 |  68.33 |  82.92 |
+|      13 |  39.23 |  43.46 |  71.54 |  79.62 |
+|      14 |  47.50 |  46.43 |  58.93 |  83.21 |
+|      15 |  45.67 |  43.00 |  52.67 |  79.33 |
+
+### 종합 분석
+| 항목 | Baseline | CoT | L2M | L2M-DV |
+| ------- | ------- | ------- | ------- | ------- |
+| Micro   |   50.42 |   49.83 |   74.71 |   86.96 |
+| Macro   |   56.29 |   55.70 |   82.16 |   90.67 |
+| EM      |   11.67 |   10.33 |   47.67 |   63.67 |
+| Tokens  | 109,974 | 117,400 | 168,758 | 240,626 |
+| Time(s) |   1.059 |   1.057 |   2.165 |   3.497 |
+
+그래프가 저장되었습니다: experiments/20251216_165514/accuracy_comparison.png

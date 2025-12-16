@@ -1,5 +1,6 @@
 """L2M-CoT 전략 패턴 모듈."""
 
+import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Dict
@@ -18,6 +19,10 @@ class StrategyResult:
     raw_output: str
     final_answer: str
     meta_info: Dict[str, object] = field(default_factory=dict)
+    prompt_tokens: int = 0
+    completion_tokens: int = 0
+    total_tokens: int = 0
+    elapsed_time: float = 0.0  # 초 단위
 
 
 class SolverStrategy(ABC):
@@ -82,10 +87,18 @@ Now solve the following instance:
     def solve(self, question: str, use_fewshot: bool, n_words: int) -> StrategyResult:
         """문제를 풀고 결과를 반환."""
         prompt = self.build_prompt(question, use_fewshot, n_words)
-        raw = call_model(prompt)
-        final = extract_final_answer(raw, n_words)
+        start = time.perf_counter()
+        response = call_model(prompt)
+        elapsed = time.perf_counter() - start
+        final = extract_final_answer(response.text, n_words)
         return StrategyResult(
-            raw_output=raw, final_answer=final, meta_info={"num_calls": 1}
+            raw_output=response.text,
+            final_answer=final,
+            meta_info={"num_calls": 1},
+            prompt_tokens=response.prompt_tokens,
+            completion_tokens=response.completion_tokens,
+            total_tokens=response.total_tokens,
+            elapsed_time=elapsed,
         )
 
 

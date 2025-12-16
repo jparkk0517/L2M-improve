@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from src.config import (
+    MODEL_NAME,
     MAX_WORDS,
     TRIALS_PER_LENGTH,
     BATCH_SIZE,
@@ -60,7 +61,7 @@ class ExperimentLogger:
         """실험 조건을 JSON 파일로 저장."""
         config = {
             "timestamp": datetime.now().isoformat(),
-            "model_name": "gpt-oss-20b",
+            "model_name": MODEL_NAME,
             "max_words": MAX_WORDS,
             "trials_per_length": TRIALS_PER_LENGTH,
             "batch_size": BATCH_SIZE,

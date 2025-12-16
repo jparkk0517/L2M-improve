@@ -37,6 +37,18 @@ class Result:
     l2m_correct: bool
     l2mdv_correct: bool
 
+    # 토큰 사용량
+    baseline_tokens: int = 0
+    cot_tokens: int = 0
+    l2m_tokens: int = 0
+    l2mdv_tokens: int = 0
+
+    # 실행 시간 (초)
+    baseline_time: float = 0.0
+    cot_time: float = 0.0
+    l2m_time: float = 0.0
+    l2mdv_time: float = 0.0
+
 
 def is_correct(pred: str, gold: str, n_words: int) -> bool:
     """예측값이 정답인지 확인."""
@@ -45,7 +57,13 @@ def is_correct(pred: str, gold: str, n_words: int) -> bool:
     return (p == g) and (len(p) == n_words)
 
 
-def log_accuracy(label: str, gold: str, pred: str) -> None:
+def log_accuracy(
+    label: str,
+    gold: str,
+    pred: str,
+    tokens: int = 0,
+    elapsed_time: float = 0.0,
+) -> None:
     """정확도를 로그로 출력."""
     g = normalize_answer(gold)
     p = normalize_answer(pred)
@@ -57,7 +75,8 @@ def log_accuracy(label: str, gold: str, pred: str) -> None:
     if len(p) != len(g):
         note = f" | len_mismatch(gold={len(g)}, pred={len(p)})"
     print(
-        f"{label:8s} | pred='{p}' | pos_acc={correct}/{total} ({acc:.1f}%) | compared={compared}{note}"
+        f"{label:8s} | pred='{p}' | pos_acc={correct}/{total} ({acc:.1f}%) "
+        f"| {tokens:,}tok | {elapsed_time:.2f}s{note}"
     )
 
 
@@ -140,22 +159,31 @@ def _solve_with_limit(
 
 
 def _print_batch_summary(results: List[Result], n_words: int) -> None:
-    """배치 처리 후 해당 num_words의 평균 정확도 출력."""
+    """배치 처리 후 해당 num_words의 평균 정확도 출력 (마크다운 표 형식)."""
     batch_results = [r for r in results if r.n_words == n_words]
     if not batch_results:
         return
 
-    print(f"\n[Batch Summary for n_words={n_words}]")
-    for name, attr in zip(STRATEGY_NAMES, STRATEGY_PRED_ATTRS):
+    print(f"\n### Batch Summary (n_words={n_words})")
+    print("| Strategy | Accuracy | Tokens | Avg Time |")
+    print("|----------|----------|--------|----------|")
+    for name, pred_attr, tok_attr, time_attr in zip(
+        STRATEGY_NAMES, STRATEGY_PRED_ATTRS, STRATEGY_TOKEN_ATTRS, STRATEGY_TIME_ATTRS
+    ):
         correct_sum = 0
         total_sum = 0
+        total_tokens = 0
+        total_time = 0.0
         for r in batch_results:
-            pred = getattr(r, attr)
+            pred = getattr(r, pred_attr)
             correct, total, _ = position_acc_stats(r.gold, pred)
             correct_sum += correct
             total_sum += total
+            total_tokens += getattr(r, tok_attr)
+            total_time += getattr(r, time_attr)
         acc = (correct_sum / total_sum * 100.0) if total_sum else 0.0
-        print(f"  {name:10s}: {acc:.2f}%")
+        avg_time = total_time / len(batch_results) if batch_results else 0.0
+        print(f"| {name:8s} | {acc:6.2f}% | {total_tokens:,} | {avg_time:.3f}s |")
 
 
 def evaluate_batch(
@@ -224,10 +252,17 @@ def evaluate_batch(
             item = outs.pop("_item")
             gold = str(item["answer"])
 
-            # 중간 로그 출력
+            # 중간 로그 출력 (토큰/시간 포함)
             for name in STRATEGY_NAMES:
                 if name in outs:
-                    log_accuracy(name, gold, outs[name].final_answer)
+                    res = outs[name]
+                    log_accuracy(
+                        name,
+                        gold,
+                        res.final_answer,
+                        tokens=res.total_tokens,
+                        elapsed_time=res.elapsed_time,
+                    )
 
             results.append(
                 Result(
@@ -247,6 +282,14 @@ def evaluate_batch(
                     l2mdv_correct=is_correct(
                         outs["L2M-DV"].final_answer, gold, n_words
                     ),
+                    baseline_tokens=outs["Baseline"].total_tokens,
+                    cot_tokens=outs["CoT"].total_tokens,
+                    l2m_tokens=outs["L2M"].total_tokens,
+                    l2mdv_tokens=outs["L2M-DV"].total_tokens,
+                    baseline_time=outs["Baseline"].elapsed_time,
+                    cot_time=outs["CoT"].elapsed_time,
+                    l2m_time=outs["L2M"].elapsed_time,
+                    l2mdv_time=outs["L2M-DV"].elapsed_time,
                 )
             )
 
@@ -304,7 +347,7 @@ def exact_match_accuracy(results: List[Result], attr_name: str) -> float:
 
 
 def summarize(results: List[Result], max_len: int) -> None:
-    """결과를 요약하여 출력."""
+    """결과를 요약하여 출력 (마크다운 표 형식)."""
     base_macro, base_micro = macro_micro(results, "baseline_pred")
     cot_macro, cot_micro = macro_micro(results, "cot_pred")
     l2m_macro, l2m_micro = macro_micro(results, "l2m_pred")
@@ -316,12 +359,43 @@ def summarize(results: List[Result], max_len: int) -> None:
     l2m_em = exact_match_accuracy(results, "l2m_pred")
     dv_em = exact_match_accuracy(results, "l2mdv_pred")
 
-    print("-" * 70)
-    print("Average position-wise accuracy (Macro / Micro) | Exact Match")
-    print(f"Baseline : {base_macro:.2f}% / {base_micro:.2f}% | EM: {base_em:.2f}%")
-    print(f"CoT      : {cot_macro:.2f}% / {cot_micro:.2f}% | EM: {cot_em:.2f}%")
-    print(f"L2M      : {l2m_macro:.2f}% / {l2m_micro:.2f}% | EM: {l2m_em:.2f}%")
-    print(f"L2M-DV   : {dv_macro:.2f}% / {dv_micro:.2f}% | EM: {dv_em:.2f}%")
+    # 토큰/시간 통계
+    token_time_data = [
+        ("Baseline", "baseline_tokens", "baseline_time"),
+        ("CoT", "cot_tokens", "cot_time"),
+        ("L2M", "l2m_tokens", "l2m_time"),
+        ("L2M-DV", "l2mdv_tokens", "l2mdv_time"),
+    ]
+    token_time_stats = {}
+    for name, tok_attr, time_attr in token_time_data:
+        total_tokens = sum(getattr(r, tok_attr) for r in results)
+        avg_time = (
+            sum(getattr(r, time_attr) for r in results) / len(results)
+            if results
+            else 0.0
+        )
+        token_time_stats[name] = {"tokens": total_tokens, "time": avg_time}
+
+    # 정확도 표 (Macro/Micro, EM)
+    print("\n### Average position-wise accuracy")
+    print("| Strategy | Macro / Micro | Exact Match |")
+    print("|----------|---------------|-------------|")
+    data = [
+        ("Baseline", base_macro, base_micro, base_em),
+        ("CoT", cot_macro, cot_micro, cot_em),
+        ("L2M", l2m_macro, l2m_micro, l2m_em),
+        ("L2M-DV", dv_macro, dv_micro, dv_em),
+    ]
+    for name, macro, micro, em in data:
+        print(f"| {name:8s} | {macro:.2f}% / {micro:.2f}% | EM: {em:.2f}% |")
+
+    # 토큰/시간 표
+    print("\n### Token Usage & Time")
+    print("| Strategy | Token Usage (Total) | Average Time (sec) |")
+    print("|----------|---------------------|-------------------|")
+    for name in ["Baseline", "CoT", "L2M", "L2M-DV"]:
+        tt = token_time_stats[name]
+        print(f"| {name:8s} | {tt['tokens']:,} tokens | {tt['time']:.3f}s |")
 
 
 # =========================================================
@@ -329,6 +403,8 @@ def summarize(results: List[Result], max_len: int) -> None:
 # =========================================================
 STRATEGY_NAMES = ["Baseline", "CoT", "L2M", "L2M-DV"]
 STRATEGY_PRED_ATTRS = ["baseline_pred", "cot_pred", "l2m_pred", "l2mdv_pred"]
+STRATEGY_TOKEN_ATTRS = ["baseline_tokens", "cot_tokens", "l2m_tokens", "l2mdv_tokens"]
+STRATEGY_TIME_ATTRS = ["baseline_time", "cot_time", "l2m_time", "l2mdv_time"]
 
 
 def get_accuracy_by_n_words(results: List[Result]) -> Dict[int, Dict[str, float]]:
@@ -382,41 +458,75 @@ def get_summary_stats(results: List[Result]) -> Dict[str, Dict[str, float]]:
 
 
 def print_accuracy_table(results: List[Result]) -> None:
-    """단어 갯수별 정확도를 테이블 형식으로 출력."""
+    """단어 갯수별 정확도를 마크다운 표 형식으로 출력."""
     acc_table = get_accuracy_by_n_words(results)
     summary = get_summary_stats(results)
 
-    # 헤더 출력
-    print("\n" + "=" * 70)
-    print("Position-wise Accuracy by Number of Words (%)")
-    print("=" * 70)
-    header = f"{'n_words':>8} | " + " | ".join(f"{name:>10}" for name in STRATEGY_NAMES)
-    print(header)
-    print("-" * 70)
+    # 토큰/시간 통계
+    token_totals = [
+        sum(getattr(r, STRATEGY_TOKEN_ATTRS[i]) for r in results)
+        for i in range(len(STRATEGY_NAMES))
+    ]
+    avg_times = [
+        sum(getattr(r, STRATEGY_TIME_ATTRS[i]) for r in results) / len(results)
+        if results
+        else 0.0
+        for i in range(len(STRATEGY_NAMES))
+    ]
+
+    # Position-wise Accuracy 표
+    print("\n### Position-wise Accuracy by Number of Words (%)")
+    print("| n_words | " + " | ".join(STRATEGY_NAMES) + " |")
+    print("| ------- | " + " | ".join(["------" for _ in STRATEGY_NAMES]) + " |")
 
     # 각 n_words별 정확도 출력
     for n_words in sorted(acc_table.keys()):
         row_data = acc_table[n_words]
-        row = f"{n_words:>8} | " + " | ".join(
-            f"{row_data[name]:>10.2f}" for name in STRATEGY_NAMES
+        row = (
+            f"| {n_words:7d} | "
+            + " | ".join(f"{row_data[name]:6.2f}" for name in STRATEGY_NAMES)
+            + " |"
         )
         print(row)
 
-    # 전체 평균 출력
-    print("-" * 70)
-    micro_row = f"{'Micro':>8} | " + " | ".join(
-        f"{summary[name]['micro']:>10.2f}" for name in STRATEGY_NAMES
+    # 종합 분석 표 (별도 섹션)
+    print("\n### 종합 분석")
+    print("| 항목 | " + " | ".join(STRATEGY_NAMES) + " |")
+    print("| ------- | " + " | ".join(["-------" for _ in STRATEGY_NAMES]) + " |")
+
+    # Micro/Macro/EM
+    micro_row = (
+        "| Micro   | "
+        + " | ".join(f"{summary[name]['micro']:7.2f}" for name in STRATEGY_NAMES)
+        + " |"
     )
-    macro_row = f"{'Macro':>8} | " + " | ".join(
-        f"{summary[name]['macro']:>10.2f}" for name in STRATEGY_NAMES
+    macro_row = (
+        "| Macro   | "
+        + " | ".join(f"{summary[name]['macro']:7.2f}" for name in STRATEGY_NAMES)
+        + " |"
     )
-    em_row = f"{'EM':>8} | " + " | ".join(
-        f"{summary[name]['em']:>10.2f}" for name in STRATEGY_NAMES
+    em_row = (
+        "| EM      | "
+        + " | ".join(f"{summary[name]['em']:7.2f}" for name in STRATEGY_NAMES)
+        + " |"
     )
     print(micro_row)
     print(macro_row)
     print(em_row)
-    print("=" * 70)
+
+    # 토큰/시간 행
+    tokens_row = (
+        "| Tokens  | "
+        + " | ".join(f"{token_totals[i]:>7,}" for i in range(len(STRATEGY_NAMES)))
+        + " |"
+    )
+    time_row = (
+        "| Time(s) | "
+        + " | ".join(f"{avg_times[i]:7.3f}" for i in range(len(STRATEGY_NAMES)))
+        + " |"
+    )
+    print(tokens_row)
+    print(time_row)
 
 
 def plot_accuracy_comparison(

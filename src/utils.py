@@ -1,9 +1,23 @@
 """L2M-CoT 유틸리티 함수 모듈."""
 
 import re
+from dataclasses import dataclass
 from typing import List
 
 from src.config import client, MODEL_NAME, TEMPERATURE
+
+
+# =========================================================
+# LLM 응답 데이터 클래스
+# =========================================================
+@dataclass
+class ModelResponse:
+    """LLM 응답과 토큰 사용량을 담는 데이터 클래스."""
+
+    text: str
+    prompt_tokens: int
+    completion_tokens: int
+    total_tokens: int
 
 
 # =========================================================
@@ -31,14 +45,28 @@ def format_question(words: List[str]) -> str:
     return "Words: " + " ".join(words)
 
 
-def call_model(prompt: str) -> str:
+def call_model(prompt: str) -> ModelResponse:
     """LLM에 프롬프트를 전달하고 응답을 반환."""
     resp = client.responses.create(
         model=MODEL_NAME,
         input=prompt,
         temperature=TEMPERATURE,
     )
-    return resp.output_text.strip()
+    # usage 정보 추출 (API에 따라 다를 수 있음)
+    usage = getattr(resp, "usage", None)
+    if usage:
+        prompt_tokens = getattr(usage, "input_tokens", 0)
+        completion_tokens = getattr(usage, "output_tokens", 0)
+    else:
+        prompt_tokens = 0
+        completion_tokens = 0
+
+    return ModelResponse(
+        text=resp.output_text.strip(),
+        prompt_tokens=prompt_tokens,
+        completion_tokens=completion_tokens,
+        total_tokens=prompt_tokens + completion_tokens,
+    )
 
 
 # =========================================================

@@ -128,29 +128,33 @@ class L2MStrategy(BaselineStrategy):
     def name(self) -> str:
         return "L2M"
 
+    def decomposition_prompt(self) -> str:
+        """Decomposition 단계 프롬프트를 반환."""
+        return """
+Decomposition (strict):
+	•	Output exactly ONE line starting with "Decomposition:".
+	•	After it, write a list of subtasks separated by " ; ".
+	•	Each subtask must be necessary to solve the overall task, atomic (one operation/decision), unambiguous, and executable on its own.
+	•	Do NOT solve anything. No extra lines.
+""".strip()
+
+    def subproblem_solving_prompt(self) -> str:
+        """Sub-problem solving 단계 프롬프트를 반환."""
+        return """
+Sub-problem solving (strict):
+	•	Output exactly one line per subtask.
+	•	Line i must be EXACTLY: Solve: <result_i>
+	•	<result_i> must be the direct output for subtask i.
+	•	Do NOT add any other text.
+""".strip()
+
     def extra_instructions(self, n_words: int) -> str:
         return f"""
 Strategy (L2M)
 
-Decomposition (strict):
-- Output exactly ONE line starting with "Decomposition:".
-- After it, write exactly {n_words} items separated by " ; ".
-- Item i must be EXACTLY:
-  Wi: get the last letter of the i-th word
-- Do NOT solve anything. No extra lines.
+{self.decomposition_prompt()}
 
-Sub-problem solving (strict):
-- Output exactly {n_words} lines.
-- Line i must be EXACTLY:
-  Solve<i>: <c>
-- <c> MUST be exactly ONE lowercase letter a-z (no spaces, no punctuation).
-- Do NOT add any other text.
-
-Final (strict):
-- Output exactly one final line:
-  Final answer: <answer>
-- <answer> must be exactly {n_words} lowercase letters a-z.
-- Output nothing after the final line.
+{self.subproblem_solving_prompt()}
 """.strip()
 
 
@@ -162,28 +166,31 @@ class L2MDVStrategy(L2MStrategy):
     def name(self) -> str:
         return "L2M-DV"
 
+    def decomposition_prompt(self) -> str:
+        """L2M의 decomposition 프롬프트 뒤에 verification criteria를 추가."""
+        base = super().decomposition_prompt()
+        additional = """
+	•	Each item must be EXACTLY in this format: Step: <subtask> || Criteria: <verification_criteria>
+	•	<verification_criteria> must be a concrete checklist-style condition that can be used to judge whether Step was correctly completed (must be specific and testable, not vague).
+""".strip()
+        return f"{base}\n{additional}"
+
+    def subproblem_solving_prompt(self) -> str:
+        """L2M의 subproblem solving 프롬프트 뒤에 verification을 추가."""
+        base = super().subproblem_solving_prompt()
+        additional = """
+	•	Line i must be EXACTLY in this format: Solve: <result_i> || Check: <pass_or_fail>
+	•	<pass_or_fail> MUST be exactly either "PASS" or "FAIL".
+	•	Check must be determined ONLY by applying Criteria to <result_i>.
+	•	If Check is "FAIL", <result_i> must be the best attempt for Step anyway (do not skip), and do not revise other steps.
+""".strip()
+        return f"{base}\n{additional}"
+
     def extra_instructions(self, n_words: int) -> str:
         return f"""
-Strategy (L2M-DV: Decomposition + Verification, no loops)
+Strategy (L2M-DV)
 
-Decomposition (strict):
-- Output exactly ONE line starting with "Decomposition:".
-- After it, write exactly {n_words} items separated by " ; " (semicolon).
-- Item i must be:
-  Wi=<the i-th word> {{criteria: output exactly 1 lowercase letter which is the last character of Wi}}
-- Do NOT solve anything else. No extra lines.
+{self.decomposition_prompt()}
 
-Solving + verification (strict):
-- Output exactly {n_words} lines.
-- Line i must be EXACTLY:
-  Solve<i>: <c> || Check<i>: P|F
-- <c> MUST be exactly ONE lowercase letter a-z (no spaces).
-- Check<i> is P if <c> meets the criteria, otherwise F.
-- Do NOT add Why. Do NOT add any extra text.
-
-Final (strict):
-- After the {n_words} lines, output exactly one final line:
-  Final answer: <answer>
-- <answer> must be exactly {n_words} lowercase letters a-z.
-- Output nothing after the final line.
+{self.subproblem_solving_prompt()}
 """.strip()

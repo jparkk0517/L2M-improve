@@ -30,8 +30,7 @@ from src.strategies import (
 )
 
 
-def main():
-    """메인 함수: 데이터셋 생성 → 전략 평가 → 결과 요약."""
+def last_letter_concatenation_task():
     # 실험 로거 시작
     logger = get_logger()
     logger.start_experiment()
@@ -66,6 +65,11 @@ def main():
 
     # 실험 종료 및 로그 저장
     logger.finish_experiment()
+
+
+def main():
+    """메인 함수: 데이터셋 생성 → 전략 평가 → 결과 요약."""
+    last_letter_concatenation_task()
 
 
 if __name__ == "__main__":
